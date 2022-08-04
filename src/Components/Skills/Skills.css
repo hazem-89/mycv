@@ -1,0 +1,100 @@
+/* .bubbleBox{
+  position: absolute;
+  height: 100%;
+  display: flex;
+} */
+.ballBox {
+  display: flex;
+  /* position: fixed */
+  justify-content: space-between;
+  max-width: 100%;
+
+}
+.bubbleBox{
+  z-index: 1;
+  left: 20%;
+  /* width: 100%; */
+  
+}
+.ball{
+  list-style: none;
+  z-index: 1;
+  max-width: 100%;
+}
+.skillImg {
+  z-index: 2;
+  animation: bubble 30s linear infinite;
+  /* width: 125x;
+  height: 125px; */
+  position: fixed;
+  bottom: 0;
+  transform-origin: bottom;
+  /* transform: translate(-50%, -50%) */
+}
+
+@keyframes bubble 
+{
+ 
+  0%{
+    transform: translate(-400%, 700%);
+
+  }
+  100%{
+    transform: translate(1200%, -600%);
+    
+
+  }
+}
+
+.emptyIcon  {
+  z-index: 2;
+  animation: bubble2 50s linear infinite;
+  width: 100px;
+  max-height: 100Px;
+  position: fixed;
+  bottom: 0;
+  transform-origin: bottom;
+  /* transform: translate(-50%, -50%) */
+}
+@keyframes bubble2
+{
+
+  0%{
+    transform: translate(-200%, 900%);
+
+  }
+  100%{
+    transform: translate(500%, -400%);
+    
+
+  }
+}
+
+
+@media (max-width: 420px) {
+  .skillImg {
+    z-index: 2;
+    /* animation: none; */
+    animation: bubble 50s linear infinite;
+    max-width: 100px;
+    /* max-height: 50px; */
+    position: fixed;
+    bottom: 0;
+    /* left: 12%; */
+    /* transform: translate(-50%, -50%) */
+  }
+  
+  @keyframes bubble 
+  {
+   
+    0%{
+      transform: translate(-500%, 500%);
+  
+    }
+    100%{
+      transform: translate(500%, -200%);
+    }
+  }
+  
+
+}

@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+.nave-items {
+  animation: goneWithWind .5s linear forwards;
+  transform-origin: left ;
+}
+
+@keyframes goneWithWind {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0px) translateY(0) scale(1.5);
+  }
+  50% {
+    opacity: .5;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateX(200px) translateY(-200px)scale(.3);
+    pointer-events: none;
+
+  }
+}
+
+.filter {
+  animation: filter 3s linear;
+}
+@keyframes filter {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    background-color: azure;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.fadein{
+  animation: fadein 3s linear;
+}
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.icon{
+  color: #fff;
+}
+
+
+.cloudBox img { 
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: cloudAnimation 120s linear infinite;
+  user-select: none;
+  z-index: 0;
+}
+
+@keyframes cloudAnimation {
+  0%{
+    transform: translate(-100%);
+  }
+  100%{
+    transform: translate(100%);
+  }
+}
+.BigCloudBox img { 
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: BigCloudBoxAnimation 120s linear infinite;
+  user-select: none;
+  z-index: 2;
+}
+
+@keyframes BigCloudBoxAnimation {
+  0%{
+    transform: translate(-100%);
+  }
+  100%{
+    transform: translate(100%);
+  }
+}
+/* .fog-filter{
+  overflow: hidden;
+}
+.fog-filter img{
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+  animation: loadingCloudAnimation 3s linear forwards;
+  z-index: 0;
+  overflow: hidden;
+}
+@keyframes loadingCloudAnimation {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0px) translateY(0)  scale(2);
+  }
+  50% {
+    opacity: .5;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateX(100px) translateY(-100px)  scale(1);
+    overflow: hidden;
+  }
+} */
+.ballon-big-box{
+  /* position: relative; */
+  /* width: 10em; */
+  width: 100%;
+}
+.balloon-img {
+  /*  */
+  position: relative;
+  z-index: 1;
+  
+}
+
+.ballonBoxPort{
+  position: absolute;
+  overflow: hidden;
+}
+
+
+.ballonBoxPort img {
+  position: absolute;
+  top: 2em;
+  animation: ballonBoxPort 60s linear;
+  right: 0em;
+  z-index: 2;
+}
+@keyframes ballonBoxPort {
+  0%{
+    transform: translate(-400%);
+  }
+  100%{
+    transform: translate(0%);
+  }
+}
+.ballon-text {
+  color: red;
+  position: absolute;
+  top: 20em;
+  left: 50%;
+  animation: ballonBoxHome 10s linear;
+}
+.ballonBoxHom {
+  position: absolute;
+  overflow: hidden;
+}
+
+.ballonBoxHom img {
+  position: absolute;
+  top: 0em;
+  max-width: 100%;
+  animation: ballonBoxHome 5s linear;
+  right: 15em;
+  z-index: 2;
+}
+@keyframes ballonBoxHome {
+  0%{
+    top: -40em;
+
+  }
+  100%{
+    top: 0em;
+  }
+}
+
+/* .loadinFilter img {
+  position: absolute;
+  top: 0em;
+  max-width: 100%;
+  animation: ballonBoxHome 10s linear;
+  right: 0em;
+}
+@keyframes ballonBoxHome {
+  0%{
+    top: 0em;
+
+  }
+  100%{
+    top: 50em;
+  }
+} */
+
+
+
+.none {
+  display: none;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .baloon-img {
+    height: 600px;
+    width: 300px;
+  }
+
+}
+@media (min-width: 1200px) {
+  .baloon-img {
+    height: 800px;
+    width: 450px;
+  }
+}
+
+
+
+.nav-icon{
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.nav-avatar{
+  background-color: rgba(46, 189, 189, 0.767);
+}
+.iconTest div{
+  animation: fadeIn 1s linear;
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.iconTest:hover div{
+  animation: navDivFadeIn .7s  linear forwards;
+  /* visibility: hidden; */
+}
+@keyframes navDivFadeIn {
+  0%{
+    left: 2em;
+    opacity: 1;
+  }
+  100%{
+    left: 5em;
+    opacity: 0;
+    display: none;
+  }
+}
+
+.iconTest:hover p{
+  visibility: visible;
+  animation: navItemFadeIn .5s  linear;
+}
+
+.nav-text{ 
+  visibility: hidden;
+  background-color: rgba(46, 189, 189, 0.767);
+  position: absolute;
+  min-width: 100px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: .5em;
+  border-radius: .5em;
+  text-align: left;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(8, 44, 85);
+  
+}
+
+@keyframes navItemFadeIn {
+  0%{
+    left: -5em;
+  }
+  100%{
+    left: 0em;
+  }
+}
