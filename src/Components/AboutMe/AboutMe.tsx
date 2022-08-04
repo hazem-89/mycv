@@ -235,7 +235,7 @@ const popUpText: SxProps = {
 }
 
 const aboutInfo: SxProps = {
-  width: { xs: '400px', md: '500px', lg: '550px' },
+  width: { xs: '350px', md: '500px', lg: '550px' },
   height: { xs: '400px', md: '400px', lg: '550px' },
   display: 'flex',
   flexDirection: 'column',
@@ -244,7 +244,7 @@ const aboutInfo: SxProps = {
   zIndex: '1',
   textAlign: 'center',
   position: 'absolute',
-  left: { xs: '.1em', md: '30em', lg: '50em', xl: '50em'},
+  left: { xs: '1.5em', md: '30em', lg: '50em', xl: '50em'},
   top: { xs: '15em', md: '4px', lg: '5em', xl: '5em' },
   padding: { xs: '4px', md: '4px',  lg: '1em', xl: '1em' },
   fontWeight: 'bold',
