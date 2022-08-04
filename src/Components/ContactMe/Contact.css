@@ -6,12 +6,12 @@
 }
 .MuiInputBase-root input {
   color: rgb(51, 5, 5);
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   border-radius: .4em;
 }
 .MuiInputBase-root textarea {
   color: rgb(51, 5, 5);
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   border-radius: .4em;
   width: 350px;
 }

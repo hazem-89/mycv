@@ -104,7 +104,7 @@ const NavBar = () => {
         >
     <Box  sx={AvatarBox} className={smokeFilter ? 'nave-items' : 'fadein iconTest'}>
       <Avatar sx={{ bgcolor: 'rgba(46, 189, 189, 0.767)' }} className={smokeFilter ? 'filter' : 'nav-avatar'} ><HomeOutlinedIcon className='nav-icon'/></Avatar >
-      <Typography className='nav-text' >About</Typography>
+      <Typography className='nav-text ' >About</Typography>
     </Box>
       </Box>
       <Box  onClick={() => {

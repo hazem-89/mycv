@@ -100,7 +100,7 @@ const text: SxProps = {
 }
 const textArea: SxProps = {
   minWidth:{ xs: '300px', md: '400px', lg: '400px'},
-  maxWidth:{ xs: '400px', md: '400px', lg: '400px'},
+  maxWidth:{ xs: '300px', md: '400px', lg: '400px'},
   marginBottom: '1em',
   color: 'white'
 
@@ -111,10 +111,10 @@ const formBox: SxProps = {
   justifyContent: 'center',
   flexDirection: 'column',
   minHeight: { xs: '450px', md: '400px', lg: '500px'},
-  minWidth:{ xs:'400px', md: '500px', lg: '600px'},
-  maxWidth:{ xs:'400px', md: '500px', lg: '600px'},
+  minWidth:{ xs:'350px', md: '500px', lg: '600px'},
+  maxWidth:{ xs:'350px', md: '500px', lg: '600px'},
   borderRadius: '1em',
-  marginLeft: { xs:'10px', md: '0px', lg: '0px'},
+  marginLeft: { xs:'40px', md: '0px', lg: '0px'},
   marginTop: { xs:'100px', md: '0px', lg: '0px'}
 }
 const button: SxProps = {

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { Avatar, Typography } from '@mui/material';
 import faceImg from '../../img/img/face1.jpg'
 import Typewriter from "typewriter-effect";
-import '../../SmokeAnimation.css'
+import classes from'../../SmokeAnimation.module.css'
 import { useEffect, useState } from 'react';
 
 // icons
@@ -67,15 +67,15 @@ const AboutMe = () => {
   return (
     <Box sx={AboutBoxStyle}>
       <Box sx={aboutDiv}>
-      <Box sx={aboutMainPicBoxStyle} className='fadeIn'>
+      <Box className={classes.fadeIn} sx={aboutMainPicBoxStyle} >
         <Avatar alt="Hazem Kawas" src={faceImg} sx={aboutMainPicStyle} />
       </Box>
-      <Box sx={aboutInfo} className="fadeIn aboutInfo" >
+      <Box sx={aboutInfo} className={classes['aboutInfo']} >
         <Box className="textBox">
-      <Typography sx={aboutWelcome} className="aboutWelcome" >
+      <Typography className={classes.aboutWelcome} sx={aboutWelcome}  >
          Welcome to my profile
         </Typography>
-      <Typography sx={aboutMainText} className='aboutMainText' >
+      <Typography sx={aboutMainText} className={classes.aboutMainText} >
       <Typewriter
               onInit={(typewriter)=> {
               typewriter
@@ -98,7 +98,7 @@ const AboutMe = () => {
           {typeEnded && 
           (
             <Box>
-              <ul  className="infoBox">
+              <ul  className={classes.infoBox}>
                 <li>AGE : <span>33</span> </li>
                 <li>FREELANCE: <span>Available</span></li>
                 <li>PHONE:<a href="tel:+46706211404"> <span>+46 706 211 404</span> </a></li>
@@ -108,7 +108,7 @@ const AboutMe = () => {
           )}
         </Box>
        {typeEnded && (
-         <Box sx={countDown} className="fadeIn">
+         <Box sx={countDown} className={classes.fadeIn}>
          <Typography>
            Time to be ready for work
          </Typography>
@@ -119,7 +119,7 @@ const AboutMe = () => {
       </Box>
       </Box>
       {typeEnded && (
-         <Box  sx={aboutIcons} className="fadein">
+         <Box  sx={aboutIcons} className={classes.fadein}>
         
          <a href="https://github.com/hazem-89"> <GitHubIcon sx={icons} /></a>
          <a href="https://www.linkedin.com/in/hazem-kawas-66971b185/"> <LinkedInIcon  sx={icons}/></a>
