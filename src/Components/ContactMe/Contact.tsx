@@ -114,7 +114,7 @@ const formBox: SxProps = {
   minWidth:{ xs:'350px', md: '500px', lg: '600px'},
   maxWidth:{ xs:'350px', md: '500px', lg: '600px'},
   borderRadius: '1em',
-  marginLeft: { xs:'40px', md: '0px', lg: '0px'},
+  // marginLeft: { xs:'40px', md: '0px', lg: '0px'},
   marginTop: { xs:'100px', md: '0px', lg: '0px'}
 }
 const button: SxProps = {
