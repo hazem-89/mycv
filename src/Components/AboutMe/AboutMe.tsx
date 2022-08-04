@@ -241,7 +241,7 @@ const aboutInfo: SxProps = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  zIndex: '1',
+  zIndex: '6',
   textAlign: 'center',
   position: 'absolute',
   left: { xs: '1em', md: '30em', lg: '50em', xl: '50em'},
