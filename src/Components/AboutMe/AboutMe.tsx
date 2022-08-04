@@ -219,7 +219,7 @@ const popUp: SxProps = {
   backgroundColor: '#fff',
   position: 'absolute',
   left: { xs: '50%', md: '50%', lg: '50%', xl: '48%' },
-  bottom: { xs: '1.5em', md: '2em', lg: '2.5em', xl: '1em' },
+  bottom: { xs: '1em', md: '2em', lg: '2.5em', xl: '1em' },
   transform: { xs: 'translate(50%, -20%)', md: 'translate(+40%, -40%)', lg: 'translate(+40%, -40%)', xl: 'translate(+40%, -40%)' },
   borderRadius: '1em 1em  1em 0.1em',
   display: 'flex',
