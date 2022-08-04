@@ -180,10 +180,10 @@ const aboutMainText: SxProps = {
 const aboutWelcome: SxProps = {
   width: { xs: '300px', md: '100%', lg: '100%', xl: '100%' },
   position: { xs: 'absolute', md: 'relative', lg: 'absolute', xl: 'absolute' },
-  top: { xs: '1em', md: '10', lg: '0', xl: '1em' },
-  left: { xs: '0em', md: '0', lg: '0', xl: '0' },
+  top: { xs: '2em', md: '10', lg: '0', xl: '1em' },
+  left: { xs: '1em', md: '0', lg: '0', xl: '0' },
   zIndex: '1',
-  fontSize:  { xs:'.5em', md: '0', lg: '0', xl: '1.5em' },
+  fontSize:  { xs:'1em', md: '0', lg: '0', xl: '1.5em' },
 }
 const aboutMainPicBoxStyle: SxProps = {
   position: { xs: 'absolute', md: 'absolute', lg: 'absolute', xl: 'absolute' },
