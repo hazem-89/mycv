@@ -121,8 +121,8 @@ const AboutMe = () => {
       {typeEnded && (
          <Box  sx={aboutIcons} className={classes.fadein}>
         
-         <a href="https://github.com/hazem-89"> <GitHubIcon sx={icons} /></a>
-         <a href="https://www.linkedin.com/in/hazem-kawas-66971b185/"> <LinkedInIcon  sx={icons}/></a>
+         <a target="_blank" rel="noreferrer" href="https://github.com/hazem-89"> <GitHubIcon sx={icons} /></a>
+         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/hazem-kawas-66971b185/"> <LinkedInIcon  sx={icons}/></a>
          {/* <ContactMailIcon  sx={icons}/> */}
          
          

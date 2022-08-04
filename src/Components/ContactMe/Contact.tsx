@@ -79,8 +79,8 @@ export const Contact = () => {
     </form>
     </Box>
     <Box  sx={aboutIcons}>
-        <GitHubIcon sx={icons} />
-        <LinkedInIcon  sx={icons}/>
+        <a target="_blank" rel="noreferrer" href="https://github.com/hazem-89"> <GitHubIcon sx={icons} /></a>
+         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/hazem-kawas-66971b185/"> <LinkedInIcon  sx={icons}/></a>
         </Box>
     </>
   )
