@@ -3,7 +3,7 @@ import { blueGrey } from '@mui/material/colors';
 import { useState } from 'react';
 import './Experiences.css'
 import InfoIcon from '@mui/icons-material/Info';
-
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 //
 import eduIcon from '../../img/Edu/edu.png'
 
@@ -24,6 +24,15 @@ const Experiences = () => {
     <Box sx={BoxStyle} className={isWorkSecOpen ? 'innerBox' : 'noBorderAnimation' } >
       {isWorkSecOpen ? 
        <Box className="education">
+        <Box >
+          <HighlightOffIcon 
+          sx={closeIcon}
+          onClick={() => {
+            isWorkSecOpen ? setIsWorkSecOpen(false) : setIsWorkSecOpen(true)
+            activeSec ? setActiveSec(false) : setActiveSec(true);
+          }} 
+          />
+        </Box>
        <ImageList sx={imageListBox}>
         {workData.map((item, index) => (
         <ImageListItem key={index}>
@@ -68,6 +77,15 @@ const Experiences = () => {
     <Box sx={BoxStyle} className={isEduSecOpen ? 'innerBox' : 'noBorderAnimation' }>
       {isEduSecOpen ? 
       <Box className="education" >
+        <Box>
+          <HighlightOffIcon  
+          sx={closeIcon} 
+          onClick={() => {
+            isEduSecOpen ? setIsEduSecOpen(false) : setIsEduSecOpen(true);
+            activeSec ? setActiveSec(false) : setActiveSec(true);
+          }} 
+          />
+        </Box>
         <ImageList sx={imageListBox}>
         {educationData.map((item, index) => (
           <ImageListItem key={index}>
@@ -98,6 +116,7 @@ const Experiences = () => {
         <Box  >
           <Typography 
             sx= {activeSec ? mainTextsActive : mainTexts} 
+            className='mainText'
             onClick={() => {
             isWorkSecOpen ? setIsWorkSecOpen(false) : setIsWorkSecOpen(true)
             activeSec ? setActiveSec(false) : setActiveSec(true);
@@ -112,20 +131,19 @@ const Experiences = () => {
 }
 
 const LayoutBox: SxProps = {
-  width: { xs: '100%', md: '100%',lg: '100%', xl: '100%'},
-  paddingLeft: { xs: '0', md: '0',lg: '2em' },
-  paddingTop: { xs: '0em', md: '0',lg: '0' },
-  marginTop: { xs: '0em', md: '0',lg: '0' },
-  height: '100vh',
+  width: { xs: '100%', md: '100%',lg: '100%', xl: '80%'},
+  // paddingLeft: { xs: '0', md: '0',lg: '8em' },
+  margin: { xs: 'auto', md: '0',lg: 'auto' },
+  height: { xs: '80vh', md: '100vh',lg: '100vh', xl: '100vh'},
   display: 'flex',
   flexDirection: {xs: 'column', md: 'column', lg: 'row'},
   alignItems: 'center',
-  justifyContent: {xs: 'space-around', md: 'column', lg: 'space-between'},
+  justifyContent: {xs: 'space-around', md: 'column', lg: 'space-around', xl: 'space-around'},
   textColor: blueGrey[900],
   zIndex: '2'
 }
 const BoxStyle: SxProps = {
-  width: { xs: '100%', md: '80%',lg: '100%' },
+  width: { xs: '100%', md: '100%',lg: '50%', xl: '50%' },
   display: 'flex',
   alignItems: 'center',
   justifyContent: "center",
@@ -136,7 +154,7 @@ const mainTexts: SxProps = {
   fontSize: { xs: '3em', md: '3em',lg: '5em' },
   webkitTextStroke: '0.2px #eceff0',
   fontFamily: 'Gentium Book Plus, serif',  
-  color: 'rgba(10, 181, 248, 0.7)',
+  color: 'rgba(32, 216, 207, 0.993)',
   zIndex: '10',
   p: '1em',
   borderRadius:'.4em',
@@ -144,30 +162,43 @@ const mainTexts: SxProps = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: "center",
-  // backgroundColor: 'red',
+  backgroundColor: 'rgba(17, 62, 80, 0.493)',
+  boxShadow:  '2px 2px 10px 5px  rgba(33, 253, 253, 0.5)',
   '&:hover': {
-    boxShadow:  '2px 2px 15px 15px  rgba(33, 253, 253, 0.5)',
+    boxShadow:  '2px 2px 15px 10px  rgba(33, 253, 169, 0.5)',
   }
 }
 const mainTextsActive: SxProps = {
   cursor: 'pointer',
-  fontSize: { xs: '3em', md: '3em',lg: '4em' },
+  fontSize: { xs: '3em', md: '3em',lg: '3em', xl: '3em' },
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'center',
   position: 'relative',
   fontFamily: 'Gentium Book Plus, serif',  
   color: 'rgba(10, 181, 248, 0.8)',
   zIndex: '10',
   padding: '1em',
   borderRadius:'.4em',
-  boxShadow:  '2px 2px 150px 150px  rgba(33, 253, 253, 0.068)',
-  backgroundColor: '#02423d42',
+  boxShadow:  '2px 2px 150px 50px  rgba(33, 253, 253, 0.5)',
+  backgroundColor: 'rgba(17, 62, 80, 0.493)',
   minWidth: { xs: '250px', md: '350px', lg: '350px' },
 }
 const imageListBox: SxProps = {
   width: { xs: '350px', md: '80%',lg: '800px',xl: '600px' },
   height: { xs: '340px', md: '80%',lg: '800px', xl: '600px' },
   borderRadius: '2em',
+}
+const closeIcon: SxProps = {
+  width: { xs: '50px', md: '',lg: '',xl: '60px' },
+  height: { xs: '50px', md: '',lg: '', xl: '60px' },
+  position: 'absolute',
+  fontSize: '4em',
+  top: '15px',
+  right: '15px',
+  zIndex: '8',
+  fill:"#c83349",
+  cursor: 'pointer',
 }
 
 

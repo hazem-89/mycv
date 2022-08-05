@@ -37,7 +37,7 @@
   content: "";
   position: absolute;
   inset: 4px;
-  background-color:#011114e8;
+  background-color:#011114;
   border-radius: 2em;
   z-index: 0 ;
 }
@@ -58,8 +58,8 @@
   position: absolute;
   display: flex;
   justify-content: 'space-around';
-  top: 46%;
-  left: 33%;
+  top: 45%;
+  left: 36%;
   /* transform: translate(-50%, 0%); */
   animation-name: eduAnimation;
   animation-duration: .5s;
@@ -68,12 +68,12 @@
   0%   { 
     position: absolute;
     top: -100px;
-    left:  33%;
+    left:  36%;
   }
   100% { 
     position: absolute;
     top:46%;
-    left:  33%;
+    left:  36%;
   }
 }
 .edu-image {
@@ -85,9 +85,8 @@
   position: absolute;
   display: flex;
   justify-content: 'space-around';
-  top: 42%;
-  left: 80.5%;
-  transform: translate(-50%, 0%);
+  top: 44%;
+  left: 74%;
   animation-name: WorkAnimation;
   animation-duration: .5s;
 }
@@ -99,10 +98,10 @@
 @keyframes WorkAnimation {
   0%   { position: absolute;
     top: -100px;
-    left: 80.5%;}
+    left: 74%;}
   100% { position: absolute;
     top: 42%;
-    left: 80.5%;;}
+    left: 74%;;}
 }
 
 .education {
@@ -111,14 +110,17 @@
 }
 
 
-@media (max-width: 420px) {
+@media only screen and (max-width: 400px) {
   .animation {
-    top: 13%;
-    left: 67%;
+    top: 10%;
+    left: 70%;
     animation-name: eduAnimation;
     animation-duration: .5s;
   }
-
+  .edu-image {
+    max-width: 200px;
+    max-height: 148px;
+  }
   @keyframes eduAnimation {
     0% { 
       position: absolute;
@@ -131,28 +133,28 @@
       left: 67%;
     }
   }
-  .edu-image {
+  /* .edu-image {
     max-width: 400px;
     max-height: 248px;
-  }
+  } */
   
   .workAnimation{
-    top: 75%;
-    left: 60%;
+    top: 78%;
+    left: 66%;
     animation-name: WorkAnimation;
   }
   .workImage{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border-radius: 500em;
   }
   @keyframes WorkAnimation {
     0%   { position: absolute;
       top: -100px;
-      left: 60%;}
+      left: 66%;}
     100% { position: absolute;
       top: 75%;
-      left: 60%;;}
+      left: 66%;;}
   }
    
 }
@@ -168,3 +170,8 @@
     opacity: 1;
   }
 }
+
+
+/* .mainText{
+  color: rgba(32, 216, 207, 0.993);
+} */

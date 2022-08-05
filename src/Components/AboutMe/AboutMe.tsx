@@ -18,9 +18,9 @@ const AboutMe = () => {
   const [backGroundAnimation, setBackGroundAnimation] = useState(false) 
   const [typeEnded, setTypeEnded] = useState(false) 
   const [days, setDays] = useState(0)
-  const [hours, setHours] = useState(0)
-  const [minutes, setMinutes] = useState(0)
-  const [seconds, setSeconds] = useState(0)
+  // const [hours, setHours] = useState(0)
+  // const [minutes, setMinutes] = useState(0)
+  // const [seconds, setSeconds] = useState(0)
 
   
   useEffect(() => {
@@ -32,13 +32,13 @@ const AboutMe = () => {
       const d = Math.floor(difference / (1000 * 60 * 60 * 24))
       setDays(d)
 
-      const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      setHours(h)
+      // const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      // setHours(h)
 
-      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
-      setMinutes(m)
-      const  s = Math.floor((difference % (1000 * 60)) / (1000))
-      setSeconds(s)
+      // const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+      // setMinutes(m)
+      // const  s = Math.floor((difference % (1000 * 60)) / (1000))
+      // setSeconds(s)
     }, 1000)
     
     return () => clearInterval(interval)
@@ -68,7 +68,7 @@ const AboutMe = () => {
     <Box sx={AboutBoxStyle}>
       <Box sx={aboutDiv}>
       <Box className={classes.fadeIn} sx={aboutMainPicBoxStyle} >
-        <Avatar alt="Hazem Kawas" src={faceImg} sx={aboutMainPicStyle} />
+        <Avatar alt="Hazem Kawas" src={faceImg}  sx={aboutMainPicStyle} />
       </Box>
       <Box sx={aboutInfo} className={classes['aboutInfo']} >
         <Box >
@@ -115,9 +115,9 @@ const AboutMe = () => {
          <Box sx={countDown} className={classes.fadeIn}>
           <Box className={classes.countDown}>
          <Typography>
-           Time to be ready for work
-         </Typography>
-       <Typography sx={countDownText}>{days < 10 ?  '0' + days : days} : {hours < 10 ?  '0' + hours : hours} : {minutes < 10 ?  '0' + minutes : minutes} : {seconds < 10 ?  '0' + seconds : seconds }</Typography>
+          Days left to finish my studies
+          </Typography>
+       <Typography sx={countDownText}>{days < 10 ?  '0' + days : days}  {days < 10 ?   'Day' : 'Days'}</Typography>
           </Box>
      </Box>
        )}
@@ -201,7 +201,7 @@ const aboutMainPicStyle: SxProps = {
   width:  { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
   height:  { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
   overflow: 'hidden',
-  zIndex: '0'
+  zIndex: '1'
 }
 
 
