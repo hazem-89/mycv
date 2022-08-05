@@ -145,3 +145,23 @@
 a:link {
   text-decoration: none;
 }
+@media only screen and (max-width: 400px) {
+  .aboutInfo {
+    max-height: 350px;
+    max-width: 350px;
+    position: absolute;
+    left: .5em;
+  }
+
+  .infoBox {
+    margin-top: 1em;
+  }
+  .Typewriter__cursor{
+    display: none;
+   }
+   .aboutWelcome{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(243, 219, 174);
+    font-size: 1em;
+  }
+}
