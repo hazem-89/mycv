@@ -1,5 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap');
 
 .smoke {
   animation: goneWithWind 3s linear forwards;
@@ -133,9 +133,9 @@
 }
 
 .aboutWelcome{
-  font-family: 'Mouse Memoirs', sans-serif;
   color: rgb(243, 219, 174);
-  font-size: 2em;
+  font-size: 1.5em;
+  font-family: 'Mouse Memoirs', sans-serif;
 }
 
 .aboutMainText{

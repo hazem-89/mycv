@@ -25,9 +25,9 @@ export const Contact = () => {
      
     <form  onSubmit={sendEmail}>
       <Box sx={formBox} className="formBox">
-      <Typography sx={text} className='title'>
+      <p  className='title'>
         Contact Me
-      </Typography>
+      </p>
       <TextField
         id="name-input"
         name="from_name"
@@ -95,9 +95,7 @@ const mainBox: SxProps = {
   width: '100%',
   marginLeft: { xs:'0em', md: '15em', lg: '15em', xl: '15em' },
 }
-const text: SxProps = {
-  color: 'rgba(82, 15, 15, 0.938)',
-}
+
 const textArea: SxProps = {
   minWidth:{ xs: '300px', md: '400px', lg: '400px'},
   maxWidth:{ xs: '300px', md: '400px', lg: '400px'},

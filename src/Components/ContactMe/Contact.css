@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 .formBox{
-  background-image: linear-gradient(45deg, rgba(71, 74, 247, 0.719), rgba(109, 180, 247, 0.562));
+  background-image: linear-gradient(45deg, rgba(71, 197, 247, 0.719), rgba(109, 180, 247, 0.562));
   box-shadow:   2px 2px 150px 50px  rgba(135, 149, 231, 0.438);
 }
 .MuiInputBase-root input {

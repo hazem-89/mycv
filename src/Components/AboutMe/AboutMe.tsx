@@ -71,10 +71,12 @@ const AboutMe = () => {
         <Avatar alt="Hazem Kawas" src={faceImg} sx={aboutMainPicStyle} />
       </Box>
       <Box sx={aboutInfo} className={classes['aboutInfo']} >
-        <Box className="textBox">
-      <Typography className={classes.aboutWelcome} sx={aboutWelcome}  >
+        <Box >
+          <Box sx={aboutWelcome}>
+      <Typography className={classes.aboutWelcome}  >
          Welcome to my profile
         </Typography>
+          </Box>
       <Typography sx={aboutMainText} className={classes.aboutMainText} >
       <Typewriter
               onInit={(typewriter)=> {
