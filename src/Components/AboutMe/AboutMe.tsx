@@ -73,9 +73,9 @@ const AboutMe = () => {
       <Box sx={aboutInfo} className={classes['aboutInfo']} >
         <Box >
           <Box sx={aboutWelcome}>
-      <Typography className={classes.aboutWelcome}  >
+      <p className={classes.aboutWelcome}  >
          Welcome to my profile
-        </Typography>
+        </p>
           </Box>
       <Typography sx={aboutMainText} className={classes.aboutMainText} >
       <Typewriter
