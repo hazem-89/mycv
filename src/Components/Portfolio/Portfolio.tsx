@@ -42,21 +42,21 @@ const data = [
   {
     id: '4',
     img: `${Shoe}`,
-    title: 'Animal war zone',
+    title: 'Shoe Web Shop',
     dis: 'A group project, built with React, TypeScript and MUI',
     url: 'https://flourishing-madeleine-966145.netlify.app/'
   },
   {
     id: '5',
     img: `${ChatApp}`,
-    title: 'Animal war zone',
+    title: 'Socket Chat App',
     dis: 'A group project "Chat app", built with React, TypeScript and Socket-io-chat',
     url: 'https://github.com/hazem-89/socket-io-chat'
   },
   {
     id: '6',
     img: `${Calender}`,
-    title: 'Animal war zone',
+    title: 'Todo calender',
     dis: 'Todo calender, built with JS',
     url: 'https://hazem-89.github.io/Todo-Calendar/'
   },

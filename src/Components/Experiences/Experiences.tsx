@@ -5,7 +5,7 @@ import './Experiences.css'
 import InfoIcon from '@mui/icons-material/Info';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 //
-import eduIcon from '../../img/Edu/edu.png'
+// import eduIcon from '../../img/Edu/edu.png'
 
 const Experiences = () => {
  const [isWorkSecOpen, setIsWorkSecOpen] = useState(false)
@@ -14,12 +14,12 @@ const Experiences = () => {
 
   return (
     <Box sx={LayoutBox} className='fadein'>
-      <Box className= {isEduSecOpen ? 'animation' : 'noAnimation' }>
+      {/* <Box className= {isEduSecOpen ? 'animation' : 'noAnimation' }>
       <img   src={eduIcon} alt="" />
-    </Box>
-      <Box className= {isWorkSecOpen ? 'workAnimation' : 'noAnimation' }>
+    </Box> */}
+      {/* <Box className= {isWorkSecOpen ? 'workAnimation' : 'noAnimation' }>
         <img  className='workImage' src="https://kinsta.com/wp-content/uploads/2020/04/code-review-tools.png" alt="" />
-      </Box>
+      </Box> */}
      
     <Box sx={BoxStyle} className={isWorkSecOpen ? 'innerBox' : 'noBorderAnimation' } >
       {isWorkSecOpen ? 
