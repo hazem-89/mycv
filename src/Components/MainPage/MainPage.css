@@ -57,7 +57,7 @@
   position: absolute;
   bottom: 0;
   max-width: 100%;
-  animation: cloudAnimation 120s linear infinite;
+  animation: cloudAnimation 100s linear infinite;
   user-select: none;
   z-index: 0;
 }
@@ -74,7 +74,7 @@
   position: absolute;
   bottom: 0;
   max-width: 100%;
-  animation: BigCloudBoxAnimation 120s linear infinite;
+  animation: BigCloudBoxAnimation 100s linear infinite;
   user-select: none;
   z-index: 2;
 }
@@ -154,7 +154,7 @@
   position: absolute;
   top: 20em;
   left: 50%;
-  animation: ballonBoxHome 10s linear;
+  animation: ballonBoxHome 60s linear;
 }
 .ballonBoxHom {
   position: absolute;
@@ -165,7 +165,7 @@
   position: absolute;
   top: 0em;
   max-width: 100%;
-  animation: ballonBoxHome 5s linear;
+  animation: ballonBoxHome 60s linear;
   right: 15em;
   z-index: 2;
 }
@@ -286,4 +286,43 @@
   100%{
     left: 0em;
   }
+}
+
+
+@media (max-width: 420px) {
+  .cloudBox img { 
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: cloudAnimation 30s linear infinite;
+    user-select: none;
+    z-index: 0;
+  }
+  
+  @keyframes cloudAnimation {
+    0%{
+      transform: translate(-100%);
+    }
+    100%{
+      transform: translate(100%);
+    }
+  }
+  .BigCloudBox img { 
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: BigCloudBoxAnimation 30s linear infinite;
+    user-select: none;
+    z-index: 2;
+  }
+  
+  @keyframes BigCloudBoxAnimation {
+    0%{
+      transform: translate(-100%);
+    }
+    100%{
+      transform: translate(100%);
+    }
+  }
+
 }

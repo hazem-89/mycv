@@ -23,7 +23,7 @@
 }
 .skillImg {
   z-index: 2;
-  animation: bubble 30s linear infinite;
+  animation: bubble 20s linear infinite;
   /* width: 125x;
   height: 125px; */
   position: fixed;
@@ -75,7 +75,7 @@
   .skillImg {
     z-index: 2;
     /* animation: none; */
-    animation: bubble 50s linear infinite;
+    animation: bubble 20s linear infinite;
     max-width: 100px;
     /* max-height: 50px; */
     position: fixed;
