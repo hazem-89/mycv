@@ -258,7 +258,7 @@ const countDown: SxProps = {
   zIndex: '1',
   position: 'absolute',
   right: { xs: '50%', md: '15em', lg: '15em', xl: '50%'},
-  bottom: { xs: '.5em', md: '4px', lg: '5em', xl: '30em' },
+  bottom: { xs: '.5em', md: '4px', lg: '5em', xl: '1em' },
   transform: 'translateX(50%)',
   fontWeight: '900',
   minWidth: '300px',
