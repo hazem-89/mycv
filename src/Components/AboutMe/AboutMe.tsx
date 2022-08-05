@@ -189,7 +189,6 @@ const aboutWelcome: SxProps = {
   top: { xs: '2em', md: '10', lg: '0', xl: '1em' },
   left: { xs: '1em', md: '0', lg: '0', xl: '0' },
   zIndex: '1',
-  fontSize:  { xs:'1em', md: '0', lg: '0', xl: '1.5em' },
 }
 const aboutMainPicBoxStyle: SxProps = {
   position: { xs: 'absolute', md: 'absolute', lg: 'absolute', xl: 'absolute' },
