@@ -147,21 +147,24 @@ a:link {
 }
 @media only screen and (max-width: 400px) {
   .aboutInfo {
-    max-height: 350px;
+    max-height: 330px;
     max-width: 350px;
     position: absolute;
     left: .5em;
   }
 
   .infoBox {
-    margin-top: 1em;
+    margin-top: 2em;
   }
   .Typewriter__cursor{
     display: none;
    }
    .aboutWelcome{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(243, 219, 174);
-    font-size: 1em;
+    font-size: 1.5em;
+  }
+  .aboutMainText{
+    max-width: 200px;
+    margin-bottom: .5em;
   }
 }

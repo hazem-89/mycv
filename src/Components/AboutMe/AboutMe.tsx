@@ -77,7 +77,8 @@ const AboutMe = () => {
          Welcome to my profile
         </p>
           </Box>
-      <Typography sx={aboutMainText} className={classes.aboutMainText} >
+      <Box sx={aboutMainText} className={classes.aboutMainText} >
+        <p className={classes.aboutMainText}>
       <Typewriter
               onInit={(typewriter)=> {
               typewriter
@@ -94,7 +95,8 @@ const AboutMe = () => {
               .start();
                 }}
                 />       
-        </Typography>
+        </p>
+        </Box>
         </Box>
         <Box sx={infoBox}>
           {typeEnded && 
