@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import { Avatar, Typography } from '@mui/material';
 import faceImg from '../../img/img/face1.jpg'
 import Typewriter from "typewriter-effect";
-import classes from'../../SmokeAnimation.module.css'
 import { useEffect, useState } from 'react';
 
 // icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+import classes from'../../SmokeAnimation.module.css'
 
 
 
@@ -84,7 +84,7 @@ const AboutMe = () => {
               .pauseFor(100)
               .typeString(`I am <span className='aboutName'>Hazem Kawas</span>, a web developer based in Gothenburg-Sweden. <br />`)
               .pauseFor(300)
-              .typeString(`Beside coding I love gaming and long walks with my dogs 🐕🐕. <br />`)
+              .typeString(`Besides coding I love gaming and long walks with my dogs 🐕🐕. <br />`)
               // .typeString(`Life is a challenge, I like to make it easier when it comes to the web!. <br />`)
               .callFunction(() => {
                 setTypeEnded(true); 
@@ -109,10 +109,12 @@ const AboutMe = () => {
         </Box>
        {typeEnded && (
          <Box sx={countDown} className={classes.fadeIn}>
+          <Box className={classes.countDown}>
          <Typography>
            Time to be ready for work
          </Typography>
        <Typography sx={countDownText}>{days < 10 ?  '0' + days : days} : {hours < 10 ?  '0' + hours : hours} : {minutes < 10 ?  '0' + minutes : minutes} : {seconds < 10 ?  '0' + seconds : seconds }</Typography>
+          </Box>
      </Box>
        )}
        
@@ -206,6 +208,7 @@ const aboutIcons: SxProps = {
   left: { xs: '50%', md: '50%', lg: '50%', xl: '50%' },
   transform: { xs: 'translate(-50%, 0%)', md: 'translate(-50%, 0%)', lg: '0', xl: '0' },
   zIndex: '3',
+  display: { xs: 'none', md: 'block', lg: 'block', xl: 'block' }
 }
 const icons: SxProps = {
   width:  { xs: '30px', md: '30px', lg: '40px' },
@@ -222,11 +225,11 @@ const popUp: SxProps = {
   bottom: { xs: '1.5em', md: '2em', lg: '2.5em', xl: '1em' },
   transform: { xs: 'translate(50%, -20%)', md: 'translate(+40%, -40%)', lg: 'translate(+40%, -40%)', xl: 'translate(+40%, -40%)' },
   borderRadius: '1em 1em  1em 0.1em',
-  display: 'flex',
   alignItems: 'center',
   zIndex: '6',
   border: '1px dashed #DE5656',
-  userSelect: 'none'
+  userSelect: 'none',
+  display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex' }
 }
 const popUpText: SxProps = {
   color: 'rgb(141, 15, 15)',
@@ -235,7 +238,7 @@ const popUpText: SxProps = {
 }
 
 const aboutInfo: SxProps = {
-  width: { xs: '350px', md: '500px', lg: '550px' },
+  width: { xs: '380px', md: '500px', lg: '550px' },
   height: { xs: '400px', md: '400px', lg: '550px' },
   display: 'flex',
   flexDirection: 'column',
@@ -244,7 +247,7 @@ const aboutInfo: SxProps = {
   zIndex: '6',
   textAlign: 'center',
   position: 'absolute',
-  left: { xs: '1em', md: '30em', lg: '50em', xl: '50em'},
+  left: { xs: '.5em', md: '30em', lg: '50em', xl: '50em'},
   top: { xs: '15em', md: '4px', lg: '5em', xl: '5em' },
   padding: { xs: '4px', md: '4px',  lg: '1em', xl: '1em' },
   fontWeight: 'bold',
@@ -255,9 +258,10 @@ const countDown: SxProps = {
   zIndex: '1',
   position: 'absolute',
   right: { xs: '50%', md: '15em', lg: '15em', xl: '50%'},
-  top: { xs: '20em', md: '4px', lg: '5em', xl: '30em' },
+  bottom: { xs: '.5em', md: '4px', lg: '5em', xl: '30em' },
   transform: 'translateX(50%)',
   fontWeight: '900',
+  minWidth: '300px',
 }
 const countDownText: SxProps = {
  fontSize: { xs: '1em', md: '2em', lg: '2em', xl: '2em' }
