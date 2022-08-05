@@ -35,14 +35,14 @@ const data = [
   {
     id: '3',
     img: `${Hats}`,
-    title: 'Animal war zone',
+    title: 'Full stack Web shope',
     dis: 'A full stack group project, built with React, TypeScript and MUI',
     url: 'https://github.com/spaceflake/newShop'
   },
   {
     id: '4',
     img: `${Shoe}`,
-    title: 'Shoe Web Shop',
+    title: 'Front-end Web shope',
     dis: 'A group project, built with React, TypeScript and MUI',
     url: 'https://flourishing-madeleine-966145.netlify.app/'
   },
