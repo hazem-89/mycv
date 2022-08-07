@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Box, SxProps, TextField, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
+import { Box, SxProps, TextField, Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import './Contact.css'
 import Typewriter from "typewriter-effect";
