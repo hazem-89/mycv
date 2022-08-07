@@ -76,7 +76,7 @@ const Portfolio = () => {
     <Box className='mainBox'>
       <Swiper
         spaceBetween={50}
-        initialSlide={1}
+        initialSlide={0}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}

@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+## MY personal CV
+
+Built with React, TypeScript and Material UI.
+
+[DEMO](https://hazemka-cv.netlify.app/)
+
+ing Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
