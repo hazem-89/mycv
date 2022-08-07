@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Box, SxProps, TextField, Button } from '@mui/material';
+import { Box, SxProps, TextField, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import './Contact.css'
 import Typewriter from "typewriter-effect";
 // icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+
+
 export const Contact = () => {
+  const [open, setOpen] = useState(true);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  }
+
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -18,11 +32,34 @@ export const Contact = () => {
           console.log(error.text);
       });
       e.currentTarget.reset()
+      handleClickOpen()
   };
   return (
     <>
     <Box sx={mainBox}>
-     
+     <Box>
+     <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Thanks for your email"}
+        </DialogTitle>
+        <DialogContent>
+          {/* <DialogContentText id="alert-dialog-description">
+            I will contact you ASAP
+          </DialogContentText> */}
+        </DialogContent>
+        <DialogActions>
+          {/* <Button onClick={handleClose}>Disagree</Button> */}
+          <Button onClick={handleClose} autoFocus>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+     </Box>
     <form  onSubmit={sendEmail}>
       <Box sx={formBox} className="formBox">
       <p  className='title'>

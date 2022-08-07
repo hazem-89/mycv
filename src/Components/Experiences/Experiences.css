@@ -132,6 +132,8 @@
   justify-content: flex-start;
   flex-direction: column;
 }
+
+
 @media only screen and (max-width: 400px) {
   .animation {
     top: 10%;
@@ -179,10 +181,13 @@
       left: 66%;;}
   }
   .MuiImageListItemBar-positionBottom:hover {
-    min-height: 180px;
     background-color: #011114;
     font-size: .5em;
   }
+  .mainTitle {
+    background:rgba(58, 67, 73, 0.815);
+  }
+ 
 }
 
 .fadein{
