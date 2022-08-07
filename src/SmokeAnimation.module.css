@@ -134,16 +134,16 @@
 a:link {
   text-decoration: none;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 375px) {
   .aboutInfo {
-    max-height: 330px;
+    max-height: 360px;
     max-width: 350px;
     position: absolute;
     left: .5em;
   }
 
   .infoBox {
-    margin-top: 2em;
+    margin-top: 3em;
   }
   .Typewriter__cursor{
     display: none;
