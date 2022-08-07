@@ -1,16 +1,18 @@
-import { Box, IconButton, ImageList, ImageListItem, ImageListItemBar, SxProps, Typography } from '@mui/material'
+import { Box, ImageList, ImageListItem, ImageListItemBar, SxProps, Typography} from '@mui/material'
 import { blueGrey } from '@mui/material/colors';
 import { useState } from 'react';
 import './Experiences.css'
-import InfoIcon from '@mui/icons-material/Info';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-//
-// import eduIcon from '../../img/Edu/edu.png'
+
+
+
 
 const Experiences = () => {
  const [isWorkSecOpen, setIsWorkSecOpen] = useState(false)
  const [isEduSecOpen, setIsEduSecOpen] = useState(false)
  const [activeSec, setActiveSec] = useState(false)
+
+
 
   return (
     <Box sx={LayoutBox} className='fadein'>
@@ -43,18 +45,10 @@ const Experiences = () => {
             loading="lazy"
             className="edu-image"
           />
-          <ImageListItemBar
-            title={item.title}
-            subtitle={item.field}
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.title}`}
-              >
-                <InfoIcon />
-                
-              </IconButton>
-            }
+            <p className="mainTitle">{item.title}</p>
+            <ImageListItemBar
+              title={item.field}
+              subtitle={item.date}
           />
         </ImageListItem>
      ))}
@@ -96,20 +90,22 @@ const Experiences = () => {
               loading="lazy"
               className="edu-image"
             />
+            <p className="mainTitle">{item.title}</p>
             <ImageListItemBar
-              title={item.title}
-              subtitle={item.field}
-              actionIcon={
-                <IconButton
-                  sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                  aria-label={`info about ${item.title}`}
-                >
-                  <InfoIcon />
-                  
-                </IconButton>
-              }
+              title={item.field}
+              subtitle={item.date}
+              sx={itemsDetails}
+              // actionIcon={
+              //   <IconButton
+              //     sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+              //     aria-label={`info about ${item.title}`}
+              //   >
+              //     <InfoIcon />
+              //   </IconButton>
+              // }
             />
           </ImageListItem>
+
         ))}
       </ImageList>
         </Box> : 
@@ -200,6 +196,12 @@ const closeIcon: SxProps = {
   fill:"#c83349",
   cursor: 'pointer',
 }
+const itemsDetails: SxProps = {
+  '&:hover': {
+    backgroundColor: 'rgba(35, 160, 233, 0.21)',
+    borderRadius: '.5em'
+  }
+}
 
 
 
@@ -211,18 +213,17 @@ const educationData = [
     title: 'Medieinstitutet',
     field: 'Front-End Devloper',
     date: "September 2021 - May 2023",
-    rows: 2,
-    cols: 2,
     featured: true,
   },
   {
     img: 'https://yellow.place/file/image/thumb/0/0/1304/djmrjyskgpdsmlya.jpg',
-    title: 'goteborg tekniska college',
+    title: 'Goteborg tekniska college',
+    date: "September 2021 - May 2023",
     field: 'Elinstallation',
   },
   {
     img: 'https://bloggcampusmolndal.files.wordpress.com/2017/12/campusmolndal_logo.jpg',
-    title: 'campus mölndal',
+    title: 'Campus mölndal',
     field: 'Front-End Devloper',
     date: "August 2019 – may 2019",
   },
@@ -231,7 +232,6 @@ const educationData = [
     title: 'Medieinstitutet',
     field: 'Webbutvecklare inom e-handel',
     date: "September 2020 – january 2021",
-    cols: 2,
   },
   
 ];
