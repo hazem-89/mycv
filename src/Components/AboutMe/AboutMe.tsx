@@ -241,7 +241,7 @@ const popUpText: SxProps = {
 }
 
 const aboutInfo: SxProps = {
-  width: { xs: '380px', md: '500px', lg: '550px' },
+  width: { xs: '350px', md: '500px', lg: '550px' },
   height: { xs: '400px', md: '400px', lg: '550px' },
   display: 'flex',
   flexDirection: 'column',
