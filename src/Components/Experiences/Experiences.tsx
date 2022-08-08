@@ -212,26 +212,26 @@ const educationData = [
     img: 'https://storage.googleapis.com/ares-profile-pictures/hd/medieinstitutet-7f3bdbdf1dd4d7fd4246ab8b72ff30b5_hd.jpg',
     title: 'Medieinstitutet',
     field: 'Front-End Devloper',
-    date: "September 2021 - May 2023",
+    date: "Sept 2021 - May 2023",
     featured: true,
   },
   {
     img: 'https://yellow.place/file/image/thumb/0/0/1304/djmrjyskgpdsmlya.jpg',
     title: 'Goteborg tekniska college',
-    date: "September 2021 - May 2023",
+    date: "Aug 2018 - May 2019",
     field: 'Elinstallation',
   },
   {
     img: 'https://bloggcampusmolndal.files.wordpress.com/2017/12/campusmolndal_logo.jpg',
     title: 'Campus mölndal',
     field: 'Front-End Devloper',
-    date: "August 2019 – may 2019",
+    date: "Aug 2019 – may 2020",
   },
   {
     img: 'https://storage.googleapis.com/ares-profile-pictures/hd/medieinstitutet-7f3bdbdf1dd4d7fd4246ab8b72ff30b5_hd.jpg',
     title: 'Medieinstitutet',
     field: 'Webbutvecklare inom e-handel',
-    date: "September 2020 – january 2021",
+    date: "Sep 2020 – jan 2021",
   },
   
 ];
@@ -248,20 +248,20 @@ const workData = [
   {
     img: 'https://teflsearch.com/sites/default/files/im%20academy.jpg',
     title: 'IM Academy',
-    field: 'Activity supervisor',
-    date: 'May 2015 – August 2015'
+    field: 'Summer activity supervisor',
+    date: 'May-2015 – Aug-2015'
   },
   {
     img: 'https://yellow.place/file/image/cover/0/0/2671/lpdqfrhaagwnsolp.jpg',
     title: 'HANIN CAFÉ',
     field: 'Owner',
-    date: "January 2011 – October 2011",
+    date: "Jan-2012 – Oct-2014",
   },
   {
     img: 'http://pharaon-group.com/data/uploads/sawa-logo.png',
     title: 'SAWA',
     field: 'Customer support',
-    date: "January 2011 – October 2011",
+    date: "Jan-2011 – Oct-2011",
     cols: 2,
   },
   
