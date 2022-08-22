@@ -255,7 +255,7 @@ const workData = [
     img: 'https://yellow.place/file/image/cover/0/0/2671/lpdqfrhaagwnsolp.jpg',
     title: 'HANIN CAFÉ',
     field: 'Owner',
-    date: "Jan-2012 – Oct-2014",
+    date: "Oct-2011 – Oct-2014",
   },
   {
     img: 'http://pharaon-group.com/data/uploads/sawa-logo.png',

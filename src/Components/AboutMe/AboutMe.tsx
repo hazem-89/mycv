@@ -4,13 +4,11 @@ import { Avatar, Typography } from '@mui/material';
 import faceImg from '../../img/img/face1.jpg'
 import Typewriter from "typewriter-effect";
 import { useEffect, useState } from 'react';
+import './AboutMe.css'
 
 // icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
-import classes from'../../SmokeAnimation.module.css'
-
 
 
 const AboutMe = () => {
@@ -67,42 +65,47 @@ const AboutMe = () => {
   return (
     <Box sx={AboutBoxStyle}>
       <Box sx={aboutDiv}>
-      <Box className={classes.fadeIn} sx={aboutMainPicBoxStyle} >
+      <Box className='fadeIn' sx={aboutMainPicBoxStyle} >
         <Avatar alt="Hazem Kawas" src={faceImg}  sx={aboutMainPicStyle} />
       </Box>
-      <Box sx={aboutInfo} className={classes['aboutInfo']} >
+      <Box sx={aboutInfo} className='aboutInfo'>
         <Box >
           <Box sx={aboutWelcome}>
-      <p className={classes.aboutWelcome}  >
+      <p className='aboutWelcome'  >
          Welcome to my profile
         </p>
           </Box>
-      <Box sx={aboutMainText} className={classes.aboutMainText} >
-        <p className={classes.aboutMainText}>
-      <Typewriter
+      <Box sx={aboutMainText} className='aboutMainText' >
+        <p className='aboutMainText'>
+          <Typewriter
               onInit={(typewriter)=> {
               typewriter
-              .pauseFor(2000)
-              .typeString(`Hello...<br />`)
+              .pauseFor(200)
+              .typeString(`Hello0<br />`)
               .pauseFor(100)
               .typeString(`I am <span className='aboutName'>Hazem Kawas</span>, a web developer based in Gothenburg-Sweden. <br />`)
-              .pauseFor(300)
-              .typeString(`Besides coding I love gaming and long walks with my dogs 🐕🐕. <br />`)
-              // .typeString(`Life is a challenge, I like to make it easier when it comes to the web!. <br />`)
+              // .typeString(``)
               .callFunction(() => {
                 setTypeEnded(true); 
               })
               .start();
                 }}
                 />       
-        </p>
+        </p> 
+      {/* {typeEnded && 
+        (
+          <div>fffff</div>
+        )} */}
         </Box>
         </Box>
         <Box sx={infoBox}>
           {typeEnded && 
           (
             <Box>
-              <ul  className={classes.infoBox}>
+               <p className='fadeIn aboutMainText'>
+             Besides coding I love gaming and long walks with my dogs 🐕🐕
+            </p> 
+              <ul  className='infoBox'>
                 <li>AGE : <span>33</span> </li>
                 <li>FREELANCE: <span>Available</span></li>
                 <li>PHONE:<a href="tel:+46706211404"> <span>+46 706 211 404</span> </a></li>
@@ -112,8 +115,8 @@ const AboutMe = () => {
           )}
         </Box>
        {typeEnded && (
-         <Box sx={countDown} className={classes.fadeIn}>
-          <Box className={classes.countDown}>
+         <Box sx={countDown} className='fadeIn'>
+          <Box className='countDown'>
          <Typography>
           Days left to finish my studies
           </Typography>
@@ -125,7 +128,7 @@ const AboutMe = () => {
       </Box>
       </Box>
       {typeEnded && (
-         <Box  sx={aboutIcons} className={classes.fadein}>
+         <Box  sx={aboutIcons} className='fadein'>
         
          <a target="_blank" rel="noreferrer" href="https://github.com/hazem-89"> <GitHubIcon sx={icons} /></a>
          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/hazem-kawas-66971b185/"> <LinkedInIcon  sx={icons}/></a>
@@ -176,12 +179,13 @@ const aboutDiv: SxProps = {
 const aboutMainText: SxProps = {
   width: { xs: '300px', md: '400px', lg: '400px', xl: '400px' },
   position: { xs: 'absolute', md: 'relative', lg: 'absolute', xl: 'absolute' },
-  top: { xs: '7em', md: '0', lg: '0', xl: '5em' },
+  top: { xs: '7em', md: '0', lg: '0', xl: '7em' },
   left: { xs: '0em', md: '0', lg: '0', xl: '0' },
   zIndex: '1',
   textAlign: 'left',
-  marginLeft: '1em',
-  fontSize:  { xs: '12px', md: '0', lg: '0', xl: '1.1em' },
+  // marginLeft: '1em',
+  paddingLeft: '1em',
+  fontSize:  { xs: '12px', md: '1.1em', lg: '1.1em', xl: '1.1em' },
 }
 const aboutWelcome: SxProps = {
   width: { xs: '300px', md: '100%', lg: '100%', xl: '100%' },
@@ -272,8 +276,9 @@ const countDownText: SxProps = {
 const infoBox: SxProps = {
  width: '100%',
  fontFamily: `''Raleway', sans-serif'`,
- paddingTop: '6em',
- paddingLeft: '1em'
+//  paddingTop: '6em',
+ paddingLeft: '1em',
+ textAlign: 'left',
 }
 
 
