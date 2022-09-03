@@ -1,7 +1,7 @@
 import { SxProps } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import { Avatar, Typography } from '@mui/material';
-import faceImg from '../../img/img/face1.jpg'
+import faceImg from '../../img/img/face2.jpg'
 import Typewriter from "typewriter-effect";
 import { useEffect, useState } from 'react';
 import './AboutMe.css'
@@ -13,14 +13,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const AboutMe = () => {
   const [popUpOn, setPopUpOn] = useState(false)
-  const [backGroundAnimation, setBackGroundAnimation] = useState(false) 
-  const [typeEnded, setTypeEnded] = useState(false) 
+  const [backGroundAnimation, setBackGroundAnimation] = useState(false)
+  const [typeEnded, setTypeEnded] = useState(false)
   const [days, setDays] = useState(0)
   // const [hours, setHours] = useState(0)
   // const [minutes, setMinutes] = useState(0)
   // const [seconds, setSeconds] = useState(0)
 
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       const target = new Date("05/20/2023 23:59:59")
@@ -38,7 +38,7 @@ const AboutMe = () => {
       // const  s = Math.floor((difference % (1000 * 60)) / (1000))
       // setSeconds(s)
     }, 1000)
-    
+
     return () => clearInterval(interval)
   }, [])
 
@@ -48,131 +48,131 @@ const AboutMe = () => {
     const backGroundAnimationTimer = window.setTimeout(() => {
       backGroundAnimation ? setBackGroundAnimation(false) : setBackGroundAnimation(true)
     }, 8000)
-    return () =>  clearTimeout(backGroundAnimationTimer);
+    return () => clearTimeout(backGroundAnimationTimer);
   }, [backGroundAnimation]);
 
   useEffect(() => {
     window.setTimeout(() => {
-      if( popUpOn) setPopUpOn(false)
+      if (popUpOn) setPopUpOn(false)
     }, 5000);
   }, [popUpOn]);
   useEffect(() => {
     window.setTimeout(() => {
-      if( !popUpOn) setPopUpOn(true)
+      if (!popUpOn) setPopUpOn(true)
     }, 20000);
   }, [popUpOn]);
 
   return (
     <Box sx={AboutBoxStyle}>
       <Box sx={aboutDiv}>
-      <Box className='fadeIn' sx={aboutMainPicBoxStyle} >
-        <Avatar alt="Hazem Kawas" src={faceImg}  sx={aboutMainPicStyle} />
-      </Box>
-      <Box sx={aboutInfo} className='aboutInfo'>
-        <Box >
-          <Box sx={aboutWelcome}>
-      <p className='aboutWelcome'  >
-         Welcome to my profile
-        </p>
-          </Box>
-      <Box sx={aboutMainText} className='aboutMainText' >
-        <p className='aboutMainText'>
-          <Typewriter
-              onInit={(typewriter)=> {
-              typewriter
-              .pauseFor(200)
-              .typeString(`Hello0<br />`)
-              .pauseFor(100)
-              .typeString(`I am <span className='aboutName'>Hazem Kawas</span>, a web developer based in Gothenburg-Sweden. <br />`)
-              // .typeString(``)
-              .callFunction(() => {
-                setTypeEnded(true); 
-              })
-              .start();
-                }}
-                />       
-        </p> 
-      {/* {typeEnded && 
+        <Box className='fadeIn' sx={aboutMainPicBoxStyle} >
+          <Avatar alt="Hazem Kawas" src={faceImg} sx={aboutMainPicStyle} />
+        </Box>
+        <Box sx={aboutInfo} className='aboutInfo'>
+          <Box >
+            <Box sx={aboutWelcome}>
+              <p className='aboutWelcome'  >
+                Welcome to my profile
+              </p>
+            </Box>
+            <Box sx={aboutMainText} className='aboutMainText' >
+              <p className='aboutMainText'>
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .pauseFor(200)
+                      .typeString(`Hello0<br />`)
+                      .pauseFor(100)
+                      .typeString(`I am <span className='aboutName'>Hazem Kawas</span>, a web developer based in Gothenburg-Sweden. <br />`)
+                      // .typeString(``)
+                      .callFunction(() => {
+                        setTypeEnded(true);
+                      })
+                      .start();
+                  }}
+                />
+              </p>
+              {/* {typeEnded && 
         (
           <div>fffff</div>
         )} */}
-        </Box>
-        </Box>
-        <Box sx={infoBox}>
-          {typeEnded && 
-          (
-            <Box>
-               <p className='fadeIn aboutMainText'>
-             Besides coding I love gaming and long walks with my dogs 🐕🐕
-            </p> 
-              <ul  className='infoBox'>
-                <li>AGE : <span>33</span> </li>
-                <li>FREELANCE: <span>Available</span></li>
-                <li>PHONE:<a href="tel:+46706211404"> <span>+46 706 211 404</span> </a></li>
-                <li>E-MAIL: <span>hazem.k.4488@gmail.com</span> </li>
-              </ul>
-            </Box> 
-          )}
-        </Box>
-       {typeEnded && (
-         <Box sx={countDown} className='fadeIn'>
-          <Box className='countDown'>
-         <Typography>
-          Days left to finish my studies
-          </Typography>
-       <Typography sx={countDownText}>{days < 10 ?  '0' + days : days}  {days < 10 ?   'Day' : 'Days'}</Typography>
+            </Box>
           </Box>
-     </Box>
-       )}
-       
-      </Box>
+          <Box sx={infoBox}>
+            {typeEnded &&
+              (
+                <Box>
+                  <p className='fadeIn aboutMainText'>
+                    Besides coding I love gaming and long walks with my dogs 🐕🐕
+                  </p>
+                  <ul className='infoBox'>
+                    <li>AGE : <span>33</span> </li>
+                    <li>FREELANCE: <span>Available</span></li>
+                    <li>PHONE:<a href="tel:+46706211404"> <span>+46 706 211 404</span> </a></li>
+                    <li>E-MAIL: <span>hazem.k.4488@gmail.com</span> </li>
+                  </ul>
+                </Box>
+              )}
+          </Box>
+          {typeEnded && (
+            <Box sx={countDown} className='fadeIn'>
+              <Box className='countDown'>
+                <Typography>
+                  Days left to finish my studies
+                </Typography>
+                <Typography sx={countDownText}>{days < 10 ? '0' + days : days}  {days < 10 ? 'Day' : 'Days'}</Typography>
+              </Box>
+            </Box>
+          )}
+
+        </Box>
       </Box>
       {typeEnded && (
-         <Box  sx={aboutIcons} className='fadein'>
-        
-         <a target="_blank" rel="noreferrer" href="https://github.com/hazem-89"> <GitHubIcon sx={icons} /></a>
-         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/hazem-kawas-66971b185/"> <LinkedInIcon  sx={icons}/></a>
-         {/* <ContactMailIcon  sx={icons}/> */}
-         
-         
-         </Box>
-       )}
-        {typeEnded && popUpOn ? <>
-          <Box sx={popUp}>
-          <Typography  sx={popUpText}>
+        <Box sx={aboutIcons} className='fadein'>
+
+          <a target="_blank" rel="noreferrer" href="https://github.com/hazem-89"> <GitHubIcon sx={icons} /></a>
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/hazem-kawas-66971b185/"> <LinkedInIcon sx={icons} /></a>
+          {/* <ContactMailIcon  sx={icons}/> */}
+
+
+        </Box>
+      )}
+      {typeEnded && popUpOn ? <>
+        <Box sx={popUp}>
+          <Typography sx={popUpText}>
             {/* Hello..!
             Lets get in touch */}
-             <Box >
-              {popUpOn ?  <Typewriter
-              onInit={(typewriter)=> {
-              typewriter 
-              .typeString(`Lets get in touch!`)
-              .pauseFor(1000)
-              // .callFunction(() => {
-              //   setTypeOn(true); 
-              // })
-              .start();
+            <Box >
+              {popUpOn ? <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(`Lets get in touch!`)
+                    .pauseFor(1000)
+                    // .callFunction(() => {
+                    //   setTypeOn(true); 
+                    // })
+                    .start();
                 }}
-                /> : null
-                    }
-                    </Box>
+              /> : null
+              }
+            </Box>
           </Typography>
         </Box>
-        </> : null}
-      </Box>
+      </> : null}
+    </Box>
   )
 }
 
 const AboutBoxStyle: SxProps = {
   width: { xs: '100%', md: '100%', lg: '100%' },
   paddingTop: { xs: '3em', md: '0em', lg: '0em' },
-  paddingLeft: { xs: '0em', md: '2em', lg: '2em'},
+  paddingLeft: { xs: '0em', md: '2em', lg: '2em' },
 }
 const aboutDiv: SxProps = {
   display: 'flex',
-  flexDirection: {xs: 'column', md: 'row', lg: 'row'},
+  flexDirection: { xs: 'column', md: 'row', lg: 'row' },
   alignItems: 'center',
-  paddingLeft: {xs: '0', md: '1em', lg: '1em'},
+  paddingLeft: { xs: '0', md: '1em', lg: '1em' },
   position: 'relative',
 
 }
@@ -185,7 +185,7 @@ const aboutMainText: SxProps = {
   textAlign: 'left',
   // marginLeft: '1em',
   paddingLeft: '1em',
-  fontSize:  { xs: '12px', md: '1.1em', lg: '1.1em', xl: '1.1em' },
+  fontSize: { xs: '12px', md: '1.1em', lg: '1.1em', xl: '1.1em' },
 }
 const aboutWelcome: SxProps = {
   width: { xs: '300px', md: '100%', lg: '100%', xl: '100%' },
@@ -202,8 +202,8 @@ const aboutMainPicBoxStyle: SxProps = {
   overflow: 'hidden',
 }
 const aboutMainPicStyle: SxProps = {
-  width:  { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
-  height:  { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
+  width: { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
+  height: { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
   overflow: 'hidden',
   zIndex: '1'
 }
@@ -218,13 +218,13 @@ const aboutIcons: SxProps = {
   display: { xs: 'none', md: 'block', lg: 'block', xl: 'block' }
 }
 const icons: SxProps = {
-  width:  { xs: '30px', md: '30px', lg: '40px' },
-  height:  { xs: '30px', md: '30px', lg: '40px' },
+  width: { xs: '30px', md: '30px', lg: '40px' },
+  height: { xs: '30px', md: '30px', lg: '40px' },
   fill: '#DE5656',
   cursor: 'pointer',
 }
 const popUp: SxProps = {
-  width: {xs: '100px', md: '150px', lg: '150px'},
+  width: { xs: '100px', md: '150px', lg: '150px' },
   height: '50px',
   backgroundColor: '#fff',
   position: 'absolute',
@@ -254,31 +254,31 @@ const aboutInfo: SxProps = {
   zIndex: '6',
   textAlign: 'center',
   position: 'absolute',
-  left: { xs: '.5em', md: '30em', lg: '50em', xl: '50em'},
+  left: { xs: '.5em', md: '30em', lg: '50em', xl: '50em' },
   top: { xs: '15em', md: '4px', lg: '5em', xl: '5em' },
-  padding: { xs: '4px', md: '4px',  lg: '1em', xl: '1em' },
+  padding: { xs: '4px', md: '4px', lg: '1em', xl: '1em' },
   fontWeight: 'bold',
-  margin:{ xs: 'auto', md: '0', lg: '0' },
+  margin: { xs: 'auto', md: '0', lg: '0' },
 
 }
 const countDown: SxProps = {
   zIndex: '1',
   position: 'absolute',
-  right: { xs: '50%', md: '15em', lg: '15em', xl: '50%'},
+  right: { xs: '50%', md: '15em', lg: '15em', xl: '50%' },
   bottom: { xs: '.5em', md: '4px', lg: '5em', xl: '1em' },
   transform: 'translateX(50%)',
   fontWeight: '900',
   minWidth: '300px',
 }
 const countDownText: SxProps = {
- fontSize: { xs: '1em', md: '2em', lg: '2em', xl: '2em' }
+  fontSize: { xs: '1em', md: '2em', lg: '2em', xl: '2em' }
 }
 const infoBox: SxProps = {
- width: '100%',
- fontFamily: `''Raleway', sans-serif'`,
-//  paddingTop: '6em',
- paddingLeft: '1em',
- textAlign: 'left',
+  width: '100%',
+  fontFamily: `''Raleway', sans-serif'`,
+  //  paddingTop: '6em',
+  paddingLeft: '1em',
+  textAlign: 'left',
 }
 
 
