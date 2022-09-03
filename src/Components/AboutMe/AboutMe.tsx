@@ -81,7 +81,7 @@ const AboutMe = () => {
                   onInit={(typewriter) => {
                     typewriter
                       .pauseFor(200)
-                      .typeString(`Hello0<br />`)
+                      .typeString(`Hello<br />`)
                       .pauseFor(100)
                       .typeString(`I am <span className='aboutName'>Hazem Kawas</span>, a web developer based in Gothenburg-Sweden. <br />`)
                       // .typeString(``)
