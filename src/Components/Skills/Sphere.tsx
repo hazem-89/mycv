@@ -2,7 +2,7 @@ import "./Skills.css";
 import { Box } from "@mui/material";
 import { TagCloud } from "@frank-mayer/react-tag-cloud";
 import randomColor from "randomcolor";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 type TagCloudOptions = {
   radius?: number;
@@ -29,7 +29,17 @@ const TagCloudComponent = () => {
   function generateRandomColors(numColors: any) {
     return randomColor({ count: numColors });
   }
-  const generateRandomColor = () => {
+  // const generateRandomColor = () => {
+  //   const colors = generateRandomColors(50);
+  //   const skillsText =
+  //     document.querySelectorAll<HTMLElement>(".tagcloud--item");
+  //   for (let i = 0; i < skillsText.length; i++) {
+  //     const skill = skillsText[i];
+  //     skill.style.color = colors[i];
+  //   }
+  // };
+
+  const generateRandomColor = useCallback(() => {
     const colors = generateRandomColors(50);
     const skillsText =
       document.querySelectorAll<HTMLElement>(".tagcloud--item");
@@ -37,23 +47,13 @@ const TagCloudComponent = () => {
       const skill = skillsText[i];
       skill.style.color = colors[i];
     }
-  };
+  }, []);
 
   useLayoutEffect(() => {
-    const generateRandomColor = () => {
-      const colors = generateRandomColors(50);
-      const skillsText =
-        document.querySelectorAll<HTMLElement>(".tagcloud--item");
-      for (let i = 0; i < skillsText.length; i++) {
-        const skill = skillsText[i];
-        skill.style.color = colors[i];
-      }
-    };
-
     setTimeout(() => {
       generateRandomColor();
     }, 10);
-  }, [width]);
+  }, [generateRandomColor, width]);
 
   useEffect(() => {
     const handleResize = () => {
