@@ -17,23 +17,19 @@
 
 .skillImg {
   z-index: 2;
-  animation: bubble 40s linear infinite;
-  position: fixed;
-  bottom: 0;
+  animation: bubble 10s linear;
+  position: absolute;
+  bottom: -110px;
   transform-origin: bottom;
 }
 
 @keyframes bubble {
-
   0% {
     transform: translate(-800%, 700%);
-
   }
 
   100% {
-    transform: translate(1200%, -600%);
-
-
+    transform: translate(0%, 0%);
   }
 }
 
@@ -41,7 +37,7 @@
   z-index: 2;
   animation: bubble2 50s linear infinite;
   width: 100px;
-  max-height: 100Px;
+  max-height: 100px;
   position: fixed;
   bottom: 0;
   transform-origin: bottom;
@@ -49,19 +45,14 @@
 }
 
 @keyframes bubble2 {
-
   0% {
     transform: translate(-200%, 900%);
-
   }
 
   100% {
     transform: translate(500%, -400%);
-
-
   }
 }
-
 
 @media (max-width: 420px) {
   .skillImg {
@@ -77,16 +68,42 @@
   }
 
   @keyframes bubble {
-
     0% {
       transform: translate(-500%, 500%);
-
     }
 
     100% {
       transform: translate(500%, -200%);
     }
   }
+}
 
+.mainSphereContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.tagcloud {
+  width: 1000px !important;
+}
+
+.tagcloud--item {
+  cursor: pointer !important;
+  font-size: 18px;
+  /* background-color: rgba(0, 255, 255, 0.616); */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 50%; */
+  background-image: url("../../img/img/skills/empty.png") !important;
+}
+
+.tagcloud--item:hover {
+  transform: scale(2);
 }
