@@ -10,10 +10,9 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import PermMediaIcon from "@mui/icons-material/PermMedia";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import AboutMe from "../AboutMe/AboutMe";
 import Experiences from "../Experiences/Experiences";
-import Skills from "../Skills/Skills";
 import TagCloudComponent from "../Skills/Sphere";
 import Portfolio from "../Portfolio/Portfolio";
 import { Contact } from "../ContactMe/Contact";
@@ -32,13 +31,7 @@ import "./MainPage.css";
 const NavBar = () => {
   const [activePage, setActivePage] = useState("About");
   const [smokeFilter, setSmokeFilter] = useState(false);
-  const tags = [
-    { text: "React", value: 60 },
-    { text: "TypeScript", value: 50 },
-    { text: "JavaScript", value: 40 },
-    { text: "HTML", value: 30 },
-    { text: "CSS", value: 20 },
-  ];
+
   const LayoutBox = styled(Box)<BoxProps>(({ theme }) => ({
     color: theme.palette.getContrastText(blueGrey[900]),
     height: "100vh",
@@ -69,7 +62,7 @@ const NavBar = () => {
           </Box>
         ) : null}
 
-        {!smokeFilter ? (
+        {!smokeFilter && activePage !== "Skills" ? (
           <Box>
             <Box sx={cloudBox} className="cloudBox">
               <img src={cloud1} alt="" />
@@ -123,12 +116,7 @@ const NavBar = () => {
                         sx={{ bgcolor: "rgba(46, 189, 189, 0.767)" }}
                         className={smokeFilter ? "filter" : "nav-avatar"}
                       >
-                        {" "}
-                        <img
-                          src={Experiencefrom}
-                          alt=""
-                          className="nav-icon"
-                        />{" "}
+                        <img src={Experiencefrom} alt="" className="nav-icon" />
                       </Avatar>
                       <Typography className="nav-text">Experiences</Typography>
                     </Box>
