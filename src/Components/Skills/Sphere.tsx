@@ -53,7 +53,7 @@ const TagCloudComponent = () => {
     setTimeout(() => {
       generateRandomColor();
     }, 10);
-  }, [width, generateRandomColor]);
+  }, [width]);
 
   useEffect(() => {
     const handleResize = () => {
