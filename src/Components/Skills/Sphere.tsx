@@ -40,6 +40,16 @@ const TagCloudComponent = () => {
   };
 
   useLayoutEffect(() => {
+    const generateRandomColor = () => {
+      const colors = generateRandomColors(50);
+      const skillsText =
+        document.querySelectorAll<HTMLElement>(".tagcloud--item");
+      for (let i = 0; i < skillsText.length; i++) {
+        const skill = skillsText[i];
+        skill.style.color = colors[i];
+      }
+    };
+
     setTimeout(() => {
       generateRandomColor();
     }, 10);
