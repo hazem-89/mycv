@@ -67,7 +67,7 @@
   background-image: linear-gradient(145deg, rgba(26, 73, 82, 0.801), rgba(86, 92, 146, 0.863));
   border-radius: 2em;
   z-index: 5;
-  box-shadow: 2px 2px 150px 15px  rgba(68, 202, 243, 0.37);
+  box-shadow: 2px 2px 150px 15px  rgba(68, 202, 243, 0.192);
 }
 .about-2-text{
   position: absolute;
@@ -129,6 +129,8 @@
 
 .aboutMainText{
   font-family: 'Raleway', sans-serif;
+  /* max-width: 200px; */
+  margin-bottom: .5em;
 }
 
 a:link {
@@ -152,8 +154,5 @@ a:link {
     color: rgb(243, 219, 174);
     font-size: 1.5em;
   }
-  .aboutMainText{
-    max-width: 200px;
-    margin-bottom: .5em;
-  }
+
 }

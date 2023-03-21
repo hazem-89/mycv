@@ -69,8 +69,8 @@ const AboutMe = () => {
           <Avatar alt="Hazem Kawas" src={faceImg} sx={aboutMainPicStyle} />
         </Box>
         <Box sx={aboutInfo} className='aboutInfo'>
-          <Box >
-            <Box sx={aboutWelcome}>
+          <Box  sx={aboutWelcome}>
+            <Box>
               <p className='aboutWelcome'  >
                 Welcome to my profile
               </p>
@@ -92,15 +92,10 @@ const AboutMe = () => {
                   }}
                 />
               </p>
-              {/* {typeEnded && 
-        (
-          <div>fffff</div>
-        )} */}
             </Box>
           </Box>
-          <Box sx={infoBox}>
-            {typeEnded &&
-              (
+          <Box style={{minHeight: 350}}>
+          <Box sx={typeEnded ?  infoBox : DisplayNone }>
                 <Box>
                   <p className='fadeIn aboutMainText'>
                     Besides coding I love gaming and long walks with my dogs 🐕🐕
@@ -112,7 +107,6 @@ const AboutMe = () => {
                     <li>E-MAIL: <span>hazem.k.4488@gmail.com</span> </li>
                   </ul>
                 </Box>
-              )}
           </Box>
           {typeEnded && (
             <Box sx={countDown} className='fadeIn'>
@@ -124,6 +118,8 @@ const AboutMe = () => {
               </Box>
             </Box>
           )}
+
+          </Box>
 
         </Box>
       </Box>
@@ -164,46 +160,49 @@ const AboutMe = () => {
 }
 
 const AboutBoxStyle: SxProps = {
-  width: { xs: '100%', md: '100%', lg: '100%' },
-  paddingTop: { xs: '3em', md: '0em', lg: '0em' },
-  paddingLeft: { xs: '0em', md: '2em', lg: '2em' },
+  width: { xs: '100%', md: '100%', lg: '100%', xl: '100%' },
+  paddingLeft: { xs: '0em', md: '1em', lg: '1em', xl: '2em' },
+  marginTop: { xs: '10em', md: '0em', lg: '0em', xl: '0em' },
 }
 const aboutDiv: SxProps = {
   display: 'flex',
-  flexDirection: { xs: 'column', md: 'row', lg: 'row' },
+  flexDirection: { xs: 'column', md: 'row', lg: 'row', xl: 'row' },
   alignItems: 'center',
-  paddingLeft: { xs: '0', md: '1em', lg: '1em' },
-  position: 'relative',
-
+  marginLeft: { xs: '0em', md: '4em', lg: '10em', xl: '5em' },
+  justifyContent: 'center',
+  paddingLeft: { xs: '0', md: '1em', lg: '1em', },
+  height: { xs: '100%', md: '100%', lg: '100%', xl: '100%' },
 }
 const aboutMainText: SxProps = {
   width: { xs: '300px', md: '400px', lg: '400px', xl: '400px' },
-  position: { xs: 'absolute', md: 'relative', lg: 'absolute', xl: 'absolute' },
-  top: { xs: '7em', md: '0', lg: '0', xl: '7em' },
-  left: { xs: '0em', md: '0', lg: '0', xl: '0' },
   zIndex: '1',
   textAlign: 'left',
-  // marginLeft: '1em',
   paddingLeft: '1em',
-  fontSize: { xs: '12px', md: '1.1em', lg: '1.1em', xl: '1.1em' },
+  fontSize: { xs: '16px', md: '1.1em', lg: '1.1em', xl: '1.1em' },
 }
 const aboutWelcome: SxProps = {
-  width: { xs: '300px', md: '100%', lg: '100%', xl: '100%' },
-  position: { xs: 'absolute', md: 'relative', lg: 'absolute', xl: 'absolute' },
-  top: { xs: '2em', md: '10', lg: '0', xl: '1em' },
-  left: { xs: '1em', md: '0', lg: '0', xl: '0' },
+  // position: { xs: 'absolute', md: 'absolute', lg: 'absolute', xl: 'absolute' },
+  // top: { xs: '2em', md: '1em', lg: '1em', xl: '1em' },
+  // left: { xs: '1em', md: '0', lg: '0', xl: '0' },
+  width: { xs: '100%', md: '100%', lg: '100%', xl: '100%' },
   zIndex: '1',
 }
+const infoBox: SxProps = {
+  width: '100%',
+  fontFamily: `''Raleway', sans-serif'`,
+  textAlign: 'left',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+}
 const aboutMainPicBoxStyle: SxProps = {
-  position: { xs: 'absolute', md: 'absolute', lg: 'absolute', xl: 'absolute' },
-  top: { xs: '2em', md: '5em', lg: '10em', xl: '10em' },
-  left: { xs: '1em', md: '35%', lg: '25%', xl: '25%' },
-  transform: { xs: '0', md: 'translate(-50%, 0%)', lg: 'translate(-50%, 0%)', xl: 'translate(-50%, 0%)' },
+  marginRight: { xs: '0em', md: '4em', lg: '4em', xl: '4em' },
   overflow: 'hidden',
 }
 const aboutMainPicStyle: SxProps = {
-  width: { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
-  height: { xs: '200px', md: '300px', lg: '300px', xl: '400px' },
+  width: { xs: '200px', md: '300px', lg: '350px', xl: '400px' },
+  height: { xs: '200px', md: '300px', lg: '350px', xl: '400px' },
   overflow: 'hidden',
   zIndex: '1'
 }
@@ -218,18 +217,18 @@ const aboutIcons: SxProps = {
   display: { xs: 'none', md: 'block', lg: 'block', xl: 'block' }
 }
 const icons: SxProps = {
-  width: { xs: '30px', md: '30px', lg: '40px' },
-  height: { xs: '30px', md: '30px', lg: '40px' },
+  width: { xs: '30px', md: '40px', lg: '40px' },
+  height: { xs: '30px', md: '40px', lg: '40px' },
   fill: '#DE5656',
   cursor: 'pointer',
 }
 const popUp: SxProps = {
-  width: { xs: '100px', md: '150px', lg: '150px' },
+  width: { xs: '100px', md: '100px', lg: '150px' },
   height: '50px',
   backgroundColor: '#fff',
   position: 'absolute',
-  left: { xs: '50%', md: '50%', lg: '50%', xl: '48%' },
-  bottom: { xs: '1.5em', md: '2em', lg: '2.5em', xl: '1em' },
+  left: { xs: '50%', md: '50%', lg: '48.5%', xl: '48.5%' },
+  bottom: { xs: '1.5em', md: '2em', lg: '2em', xl: '1em' },
   transform: { xs: 'translate(50%, -20%)', md: 'translate(+40%, -40%)', lg: 'translate(+40%, -40%)', xl: 'translate(+40%, -40%)' },
   borderRadius: '1em 1em  1em 0.1em',
   alignItems: 'center',
@@ -245,40 +244,32 @@ const popUpText: SxProps = {
 }
 
 const aboutInfo: SxProps = {
-  width: { xs: '350px', md: '500px', lg: '550px' },
-  height: { xs: '400px', md: '400px', lg: '550px' },
+  width: { xs: '400px', md: '450px', lg: '500px', xl: '550px' },
+  height: { xs: '450px', md: '500px', lg: '500px', xl: '500px' },
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
   zIndex: '6',
   textAlign: 'center',
-  position: 'absolute',
-  left: { xs: '.5em', md: '30em', lg: '50em', xl: '50em' },
-  top: { xs: '15em', md: '4px', lg: '5em', xl: '5em' },
-  padding: { xs: '4px', md: '4px', lg: '1em', xl: '1em' },
+  position: 'relative',
+  padding: { xs: '1em', md: '.5em', lg: 'em', xl: '1em' },
   fontWeight: 'bold',
-  margin: { xs: 'auto', md: '0', lg: '0' },
-
+  marginTop: { xs: '2em', md: '0em', lg: '0em', xl: '0em' },
 }
 const countDown: SxProps = {
   zIndex: '1',
-  position: 'absolute',
-  right: { xs: '50%', md: '15em', lg: '15em', xl: '50%' },
-  bottom: { xs: '.5em', md: '4px', lg: '5em', xl: '1em' },
-  transform: 'translateX(50%)',
   fontWeight: '900',
   minWidth: '300px',
+  textAlign: 'center',  
+  marginTop: '2em',
 }
 const countDownText: SxProps = {
   fontSize: { xs: '1em', md: '2em', lg: '2em', xl: '2em' }
 }
-const infoBox: SxProps = {
-  width: '100%',
-  fontFamily: `''Raleway', sans-serif'`,
-  //  paddingTop: '6em',
-  paddingLeft: '1em',
-  textAlign: 'left',
+
+const DisplayNone: SxProps = {
+ display: 'none'
 }
 
 
