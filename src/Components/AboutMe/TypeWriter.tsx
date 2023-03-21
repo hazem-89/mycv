@@ -37,20 +37,9 @@ const Typewriter: React.FC<TypewriterProps> = ({
     }, 50);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [pauseTime, numLoops, loopCount, text, setTypeEnded]);
 
-  return (
-    <span
-    // style={{
-    //   fontSize: 30,
-    //   color: "white",
-    //   marginTop: "15px",
-    //   textAlign: "center",
-    // }}
-    >
-      {displayedText}
-    </span>
-  );
+  return <span>{displayedText}</span>;
 };
 
 export default Typewriter;
