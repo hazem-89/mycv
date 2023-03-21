@@ -1,11 +1,8 @@
 import "./Skills.css";
 import { Box } from "@mui/material";
 import { TagCloud } from "@frank-mayer/react-tag-cloud";
-
-type Tag = {
-  text: string;
-  value: number;
-};
+import randomColor from "randomcolor";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 type TagCloudOptions = {
   radius?: number;
@@ -25,15 +22,47 @@ type TagCloudOptions = {
   useContainerInlineStyles?: boolean;
   useItemInlineStyles?: boolean;
 };
+
 const TagCloudComponent = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function generateRandomColors(numColors: any) {
+    return randomColor({ count: numColors });
+  }
+  const generateRandomColor = () => {
+    const colors = generateRandomColors(50);
+    const skillsText =
+      document.querySelectorAll<HTMLElement>(".tagcloud--item");
+    for (let i = 0; i < skillsText.length; i++) {
+      const skill = skillsText[i];
+      skill.style.color = colors[i];
+    }
+  };
+
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      generateRandomColor();
+    }, 10);
+  }, [width]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <Box className="mainSphereContainer">
       <TagCloud
         options={(w: Window & typeof globalThis): TagCloudOptions => ({
-          radius: Math.min(800, w.innerWidth, w.innerHeight) / 2,
-          maxSpeed: "normal",
+          radius:
+            width <= 900
+              ? Math.min(600, w.innerWidth, w.innerHeight) / 2
+              : Math.min(1000, w.innerWidth, w.innerHeight) / 2,
+          maxSpeed: "fast",
           initSpeed: "fast",
-          // direction: 130,
+          direction: 230,
           useContainerInlineStyles: false,
         })}
         onClick={(tag: string, ev: MouseEvent) => alert(tag)}
