@@ -13,10 +13,7 @@ import PHIEE from "../../img/Portfolio/Phiee/PHIEE.png";
 import ChubbyDog from "../../img/Portfolio/Chubby-dog/Chubby-dog.png";
 import restaurant from "../../img/Portfolio/Restaurant/restaurant.png";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
-
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import "./Carousel.css";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
