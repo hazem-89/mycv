@@ -47,7 +47,7 @@ const AboutMe = () => {
   useEffect(() => {
     window.setTimeout(() => {
       if (!popUpOn) setPopUpOn(true);
-    }, 20000);
+    }, 8000);
   }, [popUpOn]);
 
   return (
@@ -62,12 +62,12 @@ const AboutMe = () => {
               <p className="aboutWelcome">Welcome to my profile</p>
             </Box>
             <Box sx={aboutMainText} className="aboutMainText">
-              <p className="aboutMainText">
+              <Box className="aboutMainText">
                 <Typewriter
                   text="  Hello, I am a web developer based in Gothenburg-Sweden. Besides coding I love gaming and long walks with my dogs 🐕🐕."
                   setTypeEnded={setTypeEnded}
                 />
-              </p>
+              </Box>
             </Box>
           </Box>
           <Box style={{ minHeight: 350, marginTop: 30 }}>
@@ -112,7 +112,6 @@ const AboutMe = () => {
             rel="noreferrer"
             href="https://github.com/hazem-89"
           >
-            {" "}
             <GitHubIcon sx={icons} />
           </a>
           <a
@@ -120,7 +119,6 @@ const AboutMe = () => {
             rel="noreferrer"
             href="https://www.linkedin.com/in/hazem-kawas-66971b185/"
           >
-            {" "}
             <LinkedInIcon sx={icons} />
           </a>
           {/* <ContactMailIcon  sx={icons}/> */}
@@ -129,25 +127,20 @@ const AboutMe = () => {
       {typeEnded && popUpOn ? (
         <>
           <Box sx={popUp}>
-            <Typography sx={popUpText}>
+            <Box sx={popUpText}>
               {/* Hello..!
             Lets get in touch */}
               <Box>
-                {/* {popUpOn ? 
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(`Lets get in touch!`)
-                    .pauseFor(1000)
-                    // .callFunction(() => {
-                    //   setTypeOn(true); 
-                    // })
-                    .start();
-                }}
-              /> : null
-              } */}
+                {popUpOn ? (
+                  <Box className="aboutMainText">
+                    <Typewriter
+                      text="  Lets get in touch!"
+                      setTypeEnded={setTypeEnded}
+                    />
+                  </Box>
+                ) : null}
               </Box>
-            </Typography>
+            </Box>
           </Box>
         </>
       ) : null}
@@ -170,7 +163,7 @@ const aboutDiv: SxProps = {
   height: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
 };
 const aboutMainText: SxProps = {
-  width: { xs: "300px", md: "400px", lg: "400px", xl: "400px" },
+  width: { xs: "300px", md: "400px", lg: "450", xl: "450" },
   zIndex: "1",
   textAlign: "left",
   paddingLeft: "1em",
