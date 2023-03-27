@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import NM_LOGO_WHITE from "../../img/work/NM_LOGO_WHITE.png";
 import VEOLIA from "../../img/work/VEOLIA.jpg";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const Experiences = () => {
   const [isWorkSecOpen, setIsWorkSecOpen] = useState(false);
@@ -231,11 +230,6 @@ const mainTextsActive: SxProps = {
     boxShadow: "2px 2px 15px 10px  rgba(33, 253, 169, 0.5)",
   },
 };
-const imageListBox: SxProps = {
-  width: { xs: "350px", md: "80%", lg: "800px", xl: "600px" },
-  height: { xs: "340px", md: "80%", lg: "800px", xl: "600px" },
-  borderRadius: "2em",
-};
 const closeIcon: SxProps = {
   width: { xs: "50px", md: "60px", lg: "60px", xl: "60px" },
   height: { xs: "50px", md: "60px", lg: "60px", xl: "60px" },
@@ -246,12 +240,6 @@ const closeIcon: SxProps = {
   zIndex: "8",
   fill: "#c83349",
   cursor: "pointer",
-};
-const itemsDetails: SxProps = {
-  "&:hover": {
-    backgroundColor: "rgba(35, 160, 233, 0.21)",
-    borderRadius: ".5em",
-  },
 };
 
 const educationData = [
