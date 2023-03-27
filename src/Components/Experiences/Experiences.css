@@ -1,79 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap");
 
-
-.noAnimation{
+.noAnimation {
   display: none;
 }
 .border-animation {
   height: calc(100% - 4px);
   border: 2px solid #fff;
-  position: relative; 
-}
-.noBorderAnimation{
   position: relative;
 }
-.innerBox{
+.noBorderAnimation {
+  position: relative;
+}
+.innerBox {
   margin: 10px;
   position: relative;
   /* height: calc(100% - 20px); */
   display: flex;
-  align-items: 'center';
+  align-items: "center";
   justify-content: "center";
   overflow: hidden;
   border-radius: 2em;
 }
-.innerBox::before{
+.innerBox::before {
   content: "";
   background: linear-gradient(#de5656bb, #7a3333);
   width: 400px;
   height: 140%;
   position: absolute;
   color: rgb(136, 41, 41);
-  animation: borderAnimation 1s linear; 
+  animation: borderAnimation 1s linear;
   transform: rotate(45deg);
-
 }
-.innerBox::after{
+.innerBox::after {
   content: "";
   position: absolute;
   inset: 4px;
-  background-color:#011114;
+  background-color: #011114;
   border-radius: 2em;
-  z-index: 0 ;
+  z-index: 0;
 }
 @keyframes borderAnimation {
-  0%{
+  0% {
     transform: rotate(45deg);
     background: linear-gradient(#f9c9ff3a, #e998e93d);
   }
   /* 50%{
     transform: rotate(360deg)
   } */
-  50%{
+  50% {
     transform: rotate(220deg);
     background: linear-gradient(#7aeff373, #3359859d);
-    }
+  }
 }
 .animation {
   position: absolute;
   display: flex;
-  justify-content: 'space-around';
+  justify-content: "space-around";
   top: 45%;
   left: 36%;
   /* transform: translate(-50%, 0%); */
   animation-name: eduAnimation;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 @keyframes eduAnimation {
-  0%   { 
+  0% {
     position: absolute;
     top: -100px;
-    left:  36%;
+    left: 36%;
   }
-  100% { 
+  100% {
     position: absolute;
-    top:46%;
-    left:  36%;
+    top: 46%;
+    left: 36%;
   }
 }
 .edu-image {
@@ -81,51 +79,55 @@
   max-height: 180px;
 }
 
-.workAnimation{
+.workAnimation {
   position: absolute;
   display: flex;
-  justify-content: 'space-around';
+  justify-content: "space-around";
   top: 44%;
   left: 74%;
   animation-name: WorkAnimation;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
-.workImage{
+.workImage {
   width: 100px;
   height: 100px;
   border-radius: 500em;
 }
 
 @keyframes WorkAnimation {
-  0%   { position: absolute;
+  0% {
+    position: absolute;
     top: -100px;
-    left: 74%;}
-  100% { position: absolute;
+    left: 74%;
+  }
+  100% {
+    position: absolute;
     top: 42%;
-    left: 74%;;}
+    left: 74%;
+  }
 }
 
 .education {
-  z-index: 9999;
-  /* height: 100%; */
+  z-index: 200;
+  height: 100%;
 }
-.mainTitle{
+.mainTitle {
   position: absolute;
   bottom: 3em;
-  padding-left: .5em;
+  padding-left: 0.5em;
   height: 30px;
   font-size: 1.2em;
-  width: calc(100% - .5em)
+  width: calc(100% - 0.5em);
 }
-.mainTitle:hover{
+.mainTitle:hover {
   background-color: rgba(35, 160, 233, 0.61);
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 /* .MuiImageListItem-standard:hover {
   min-height: 300px;
 } */
-.MuiImageListItem-standard div{
+.MuiImageListItem-standard div {
   height: 75px;
   display: flex;
   align-items: flex-start;
@@ -133,27 +135,26 @@
   flex-direction: column;
 }
 
-
 @media only screen and (max-width: 400px) {
   .animation {
     top: 10%;
     left: 70%;
     animation-name: eduAnimation;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
   }
-  .edu-image {
+  .exp-image {
     max-width: 200px;
     max-height: 148px;
   }
   @keyframes eduAnimation {
-    0% { 
+    0% {
       position: absolute;
       top: -100px;
       left: 67%;
     }
-    100% { 
+    100% {
       position: absolute;
-      top:13%;
+      top: 13%;
       left: 67%;
     }
   }
@@ -161,48 +162,74 @@
     max-width: 400px;
     max-height: 248px;
   } */
-  
-  .workAnimation{
+
+  .workAnimation {
     top: 78%;
     left: 66%;
     animation-name: WorkAnimation;
   }
-  .workImage{
+  .workImage {
     width: 75px;
     height: 75px;
     border-radius: 500em;
   }
   @keyframes WorkAnimation {
-    0%   { position: absolute;
+    0% {
+      position: absolute;
       top: -100px;
-      left: 66%;}
-    100% { position: absolute;
+      left: 66%;
+    }
+    100% {
+      position: absolute;
       top: 75%;
-      left: 66%;;}
+      left: 66%;
+    }
   }
   .MuiImageListItemBar-positionBottom:hover {
     background-color: #011114;
-    font-size: .5em;
+    font-size: 0.5em;
   }
   .mainTitle {
-    background:rgba(58, 67, 73, 0.815);
+    background: rgba(58, 67, 73, 0.815);
   }
- 
 }
-
-.fadein{
+@media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1200px) {
+    .innerBox {
+      width: 60% !important;
+    }
+  }
+}
+.fadein {
   animation: fadein 1s linear;
 }
 @keyframes fadein {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-
 /* .mainText{
   color: rgba(32, 216, 207, 0.993);
 } */
+
+.exp-image {
+  width: 400px !important;
+  height: 250px !important;
+  /* height: 100%;
+  object-fit: cover;
+  border-radius: 2em; */
+}
+
+@media only screen and (max-width: 800px) {
+  .exp-image {
+    width: 250px !important;
+    height: 148px !important;
+  }
+  .swiper-pagination {
+    margin-top: 0;
+  }
+}
