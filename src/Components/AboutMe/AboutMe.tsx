@@ -77,7 +77,7 @@ const AboutMe = () => {
               </Box>
             </Box>
           </Box>
-          <Box style={{ minHeight: 350, marginTop: 30 }}>
+          <Box style={{ marginTop: 30 }}>
             <Box sx={typeEnded ? infoBox : DisplayNone}>
               <Box>
                 <ul className="infoBox">
@@ -158,7 +158,7 @@ const AboutMe = () => {
 const AboutBoxStyle: SxProps = {
   width: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
   paddingLeft: { xs: "0em", md: "1em", lg: "1em", xl: "2em" },
-  marginTop: { xs: "10em", md: "0em", lg: "0em", xl: "0em" },
+  marginTop: { xs: "2em", md: "0em", lg: "0em", xl: "0em" },
 };
 const aboutDiv: SxProps = {
   display: "flex",
@@ -167,7 +167,7 @@ const aboutDiv: SxProps = {
   marginLeft: { xs: "0em", md: "4em", lg: "10em", xl: "5em" },
   justifyContent: "center",
   paddingLeft: { xs: "0", md: "1em", lg: "1em" },
-  height: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
+  height: { xs: "700px", md: "100%", lg: "100%", xl: "100%" },
 };
 const aboutMainText: SxProps = {
   width: { xs: "300px", md: "400px", lg: "450px", xl: "500px" },
@@ -179,6 +179,7 @@ const aboutMainText: SxProps = {
 const aboutWelcome: SxProps = {
   width: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
   zIndex: "1",
+  marginTop: { xs: "0em", md: "0em", lg: "0em", xl: "0em" },
 };
 const infoBox: SxProps = {
   width: "100%",
@@ -192,10 +193,8 @@ const infoBox: SxProps = {
 const aboutMainPicBoxStyle: SxProps = {
   marginRight: { xs: "0em", md: "4em", lg: "4em", xl: "4em" },
   overflow: "hidden",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
+  minWidth: { xs: "200px", md: "300px", lg: "350px", xl: "400px" },
+  paddingBottom: { xs: "10px", md: "0px", lg: "0px", xl: "0px" },
 };
 const aboutMainPicStyle: SxProps = {
   width: { xs: "200px", md: "300px", lg: "350px", xl: "400px" },
@@ -250,8 +249,8 @@ const popUpText: SxProps = {
 };
 
 const aboutInfo: SxProps = {
-  width: { xs: "400px", md: "450px", lg: "500px", xl: "550px" },
-  height: { xs: "450px", md: "500px", lg: "500px", xl: "500px" },
+  width: { xs: "350px", md: "450px", lg: "500px", xl: "550px" },
+  height: { xs: "400px", md: "500px", lg: "500px", xl: "500px" },
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -259,9 +258,9 @@ const aboutInfo: SxProps = {
   zIndex: "6",
   textAlign: "center",
   position: "relative",
-  padding: { xs: "1em", md: ".5em", lg: "em", xl: "1em" },
+  padding: { xs: ".5em", md: ".5em", lg: "1em", xl: "1em" },
   fontWeight: "bold",
-  marginTop: { xs: "2em", md: "0em", lg: "0em", xl: "0em" },
+  marginTop: { xs: "0em", md: "0em", lg: "0em", xl: "0em" },
 };
 const countDown: SxProps = {
   zIndex: "1",
