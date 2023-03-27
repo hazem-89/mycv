@@ -75,8 +75,8 @@ const TagCloudComponent = () => {
           direction: 230,
           useContainerInlineStyles: false,
         })}
-        onClick={(tag: string, ev: MouseEvent) => alert(tag)}
-        onClickOptions={{ passive: true }}
+        // onClick={(tag: string, ev: MouseEvent) => alert(tag)}
+        // onClickOptions={{ passive: true }}
       >
         {[
           "VSCode",
