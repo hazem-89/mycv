@@ -24,7 +24,7 @@
 .innerBox::before {
   content: "";
   background: linear-gradient(#de5656bb, #7a3333);
-  width: 400px;
+  width: 1200px;
   height: 140%;
   position: absolute;
   color: rgb(136, 41, 41);
@@ -110,6 +110,7 @@
 .education {
   z-index: 200;
   height: 100%;
+  width: 100%;
 }
 .mainTitle {
   position: absolute;
@@ -193,11 +194,10 @@
     background: rgba(58, 67, 73, 0.815);
   }
 }
+
 @media only screen and (max-width: 1200px) {
-  @media only screen and (max-width: 1200px) {
-    .innerBox {
-      width: 60% !important;
-    }
+  .innerBox {
+    width: 95% !important;
   }
 }
 .fadein {
