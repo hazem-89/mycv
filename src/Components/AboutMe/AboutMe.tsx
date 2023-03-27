@@ -77,7 +77,7 @@ const AboutMe = () => {
               </Box>
             </Box>
           </Box>
-          <Box style={{ marginTop: 30 }}>
+          <Box style={{ marginTop: 30, minHeight: "250px" }}>
             <Box sx={typeEnded ? infoBox : DisplayNone}>
               <Box>
                 <ul className="infoBox">
@@ -250,7 +250,7 @@ const popUpText: SxProps = {
 
 const aboutInfo: SxProps = {
   width: { xs: "350px", md: "450px", lg: "500px", xl: "550px" },
-  height: { xs: "400px", md: "500px", lg: "500px", xl: "500px" },
+  height: { xs: "400px", md: "500px", lg: "450px", xl: "500px" },
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
