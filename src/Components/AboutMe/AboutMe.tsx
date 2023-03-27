@@ -55,18 +55,25 @@ const AboutMe = () => {
       <Box sx={aboutDiv}>
         <Box className="fadeIn" sx={aboutMainPicBoxStyle}>
           <Avatar alt="Hazem Kawas" src={faceImg} sx={aboutMainPicStyle} />
+          {/* <Typography variant="h1" style={{}}>
+            Hazem Kawas
+          </Typography> */}
         </Box>
         <Box sx={aboutInfo} className="aboutInfo">
           <Box sx={aboutWelcome}>
             <Box>
               <p className="aboutWelcome">Welcome to my profile</p>
             </Box>
-            <Box sx={aboutMainText} className="aboutMainText">
+            <Box sx={aboutMainText}>
               <Box className="aboutMainText">
                 <Typewriter
-                  text="  Hello, I am a web developer based in Gothenburg-Sweden. Besides coding I love gaming and long walks with my dogs 🐕🐕."
+                  text="  Hello. My name is Hazem Kawas. I am a web developer based in Gothenburg-Sweden. Besides coding I love gaming and long walks with my dogs 🐕🐕."
                   setTypeEnded={setTypeEnded}
                 />
+                {/* <Typewriter
+                  text="  I am a web developer based in Gothenburg-Sweden. Besides coding I love gaming and long walks with my dogs 🐕🐕."
+                  setTypeEnded={setTypeEnded}
+                /> */}
               </Box>
             </Box>
           </Box>
@@ -163,16 +170,13 @@ const aboutDiv: SxProps = {
   height: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
 };
 const aboutMainText: SxProps = {
-  width: { xs: "300px", md: "400px", lg: "450", xl: "450" },
+  width: { xs: "300px", md: "400px", lg: "450px", xl: "500px" },
   zIndex: "1",
   textAlign: "left",
   paddingLeft: "1em",
   fontSize: { xs: "16px", md: "1.1em", lg: "1.1em", xl: "1.1em" },
 };
 const aboutWelcome: SxProps = {
-  // position: { xs: 'absolute', md: 'absolute', lg: 'absolute', xl: 'absolute' },
-  // top: { xs: '2em', md: '1em', lg: '1em', xl: '1em' },
-  // left: { xs: '1em', md: '0', lg: '0', xl: '0' },
   width: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
   zIndex: "1",
 };
@@ -188,6 +192,10 @@ const infoBox: SxProps = {
 const aboutMainPicBoxStyle: SxProps = {
   marginRight: { xs: "0em", md: "4em", lg: "4em", xl: "4em" },
   overflow: "hidden",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column",
 };
 const aboutMainPicStyle: SxProps = {
   width: { xs: "200px", md: "300px", lg: "350px", xl: "400px" },
