@@ -1,29 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
-.formBox{
-  background-image: linear-gradient(45deg, rgba(71, 197, 247, 0.719), rgba(109, 180, 247, 0.562));
-  box-shadow:   2px 2px 150px 50px  rgba(135, 149, 231, 0.438);
+.formBox {
+  background-image: linear-gradient(
+    45deg,
+    rgba(10, 64, 85, 0.719),
+    rgba(225, 237, 248, 0.747)
+  );
+  box-shadow: 2px 2px 150px 50px rgba(135, 149, 231, 0.438);
+  backdrop-filter: blur(10px);
 }
 .MuiInputBase-root input {
   color: rgb(51, 5, 5);
-  /* font-size: 1.5em; */
-  border-radius: .4em;
+  font-size: 1.5em;
+  border-radius: 0.4em;
 }
 .MuiInputBase-root textarea {
   color: rgb(51, 5, 5);
   /* font-size: 1.5em; */
-  border-radius: .4em;
+  border-radius: 0.4em;
   width: 350px;
 }
 
-.title{
-  font-family: 'Dancing Script', cursive;
+.title {
+  font-family: "Dancing Script", cursive;
   font-size: 3em;
-  
 }
 
-.MuiFormLabel-asterisk{
-  color:  rgb(212, 24, 24);
+.MuiFormLabel-asterisk {
+  color: rgb(212, 24, 24);
   font-size: 1.5em;
 }
 
