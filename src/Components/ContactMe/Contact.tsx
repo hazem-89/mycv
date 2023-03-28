@@ -154,11 +154,12 @@ const mainBox: SxProps = {
   alignItems: "center",
   justifyContent: "center",
   width: "100%",
-  height: "100%",
+  // height: "100%",
+  margin: "auto",
 };
 
 const textArea: SxProps = {
-  minWidth: { xs: "300px", md: "400px", lg: "400px" },
+  minWidth: { xs: "250px", md: "400px", lg: "400px" },
   maxWidth: { xs: "300px", md: "400px", lg: "400px" },
   marginBottom: "1em",
   color: "white",
@@ -170,12 +171,11 @@ const formBox: SxProps = {
   justifyContent: "center",
   flexDirection: "column",
   backgroundColor: "rgba(0, 0, 0, 1)",
-  minHeight: { xs: "450px", md: "400px", lg: "500px" },
-  minWidth: { xs: "350px", md: "500px", lg: "600px" },
-  maxWidth: { xs: "350px", md: "500px", lg: "600px" },
+  minHeight: { xs: "300px", md: "400px", lg: "500px" },
+  minWidth: { xs: "300px", md: "500px", lg: "600px" },
+  maxWidth: { xs: "300px", md: "500px", lg: "600px" },
   borderRadius: "1em",
-  marginLeft: { xs: "20px", md: "0px", lg: "0px" },
-  marginTop: { xs: "20px", md: "0px", lg: "0px" },
+  marginTop: "4em",
 };
 const button: SxProps = {
   minWidth: { xs: "100px", md: "200px", lg: "200px" },
@@ -192,10 +192,10 @@ const button: SxProps = {
 
 const aboutIcons: SxProps = {
   position: { xs: "absolute", md: "absolute", lg: "absolute", xl: "" },
-  bottom: { xs: "1em", md: "1em", lg: "1em", xl: "0" },
-  left: { xs: "50%", md: "50%", lg: "50%", xl: "50%" },
+  bottom: { xs: "0em", md: "1em", lg: "1em", xl: "0" },
+  left: { xs: "80%", md: "50%", lg: "50%", xl: "50%" },
   transform: {
-    xs: "translate(-50%, 0%)",
+    // xs: "translate(-50%, 0%)",
     md: "translate(-50%, 0%)",
     lg: "0",
     xl: "0",
