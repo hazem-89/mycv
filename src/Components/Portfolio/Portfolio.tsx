@@ -219,10 +219,10 @@ const Portfolio = () => {
                 </Box>
                 <Box sx={detailsInfo}>
                   <Box sx={detailsInfoInner}>
-                    <Box>
+                    <Box style={{ width: "100%" }}>
                       <Typography
-                        variant="h1"
-                        component="h2"
+                        variant="h4"
+                        component="h4"
                         sx={detailsMainTitle}
                       >
                         {ProjectToDisplay.title}
@@ -231,7 +231,7 @@ const Portfolio = () => {
                         {ProjectToDisplay.moreInfo}
                       </Typography>
                     </Box>
-                    <Box>
+                    <Box style={{ marginTop: 10 }}>
                       {ProjectToDisplay.demoUrl && (
                         <Button variant="contained" sx={moreInfoBtn}>
                           <a
@@ -267,18 +267,21 @@ const Portfolio = () => {
 };
 const detailsContainer: SxProps = {
   zIndex: 100,
-  width: "80%",
-  height: "90%",
+  width: "90%",
+  // height: "100%",
   display: "flex",
+  flexDirection: { xs: "column", sm: "column", md: "row" },
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: "transparent",
   textAlign: "center",
+  // marginTop: { xs: 0, sm: 0, md: 0 },
 };
 const detailsContent: SxProps = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  flexDirection: { xs: "column", sm: "column", md: "row" },
   // backgroundColor: "transparent",
   textAlign: "center",
   width: "100%",
@@ -304,9 +307,8 @@ const detailsInfo: SxProps = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  width: "50%",
-  // height: "100%",
-  // color: "blue",
+  width: { xs: "100%", sm: "100%", md: "50%" },
+  height: "100%",
   borderRadius: "10px",
 };
 const detailsInfoInner: SxProps = {
@@ -315,7 +317,7 @@ const detailsInfoInner: SxProps = {
   justifyContent: "center",
   alignItems: "center",
   width: "80%",
-  padding: "50px",
+  padding: { xs: "10px", sm: "10px", md: "50px" },
   borderRadius: "10px",
 };
 const MainInfoButton: SxProps = {
@@ -352,5 +354,6 @@ const closeIcon: SxProps = {
 const detailsMainTitle: SxProps = {
   marginBottom: ".2em",
   color: "#00d9ff",
+  width: "100%",
 };
 export default Portfolio;

@@ -9,7 +9,7 @@
 }
 .swiper {
   width: 90%;
-  min-height: 650px;
+  min-height: 450px;
 }
 .port-image img {
   display: block;
@@ -111,10 +111,35 @@
   height: 200px;
   border-radius: 2em;
 }
-
+@media screen and (max-width: 900px) {
+  .detailsImage {
+    display: none;
+  }
+  .swiper-pagination {
+    margin-top: 0rem !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .port-image img {
+    height: 200px;
+    width: 300px;
+  }
+  .swiper {
+    margin-top: 2em;
+  }
+  .swiper-pagination {
+    bottom: 1em !important;
+  }
+  .detailsInfo {
+    margin-bottom: 0em;
+  }
+}
 .detailsInfo {
-  color: #d85b22;
+  color: #f8b190;
   font-weight: bold;
   text-align: left;
   margin-bottom: 5em;
+  width: 100%;
+  overflow: auto;
+  max-height: 200px;
 }
