@@ -77,7 +77,7 @@ const AboutMe = () => {
               </Box>
             </Box>
           </Box>
-          <Box style={{ marginTop: 30, minHeight: "250px" }}>
+          <Box style={{ minHeight: "250px" }}>
             <Box sx={typeEnded ? infoBox : DisplayNone}>
               <Box>
                 <ul className="infoBox">
@@ -158,7 +158,7 @@ const AboutMe = () => {
 const AboutBoxStyle: SxProps = {
   width: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
   paddingLeft: { xs: "0em", md: "1em", lg: "1em", xl: "2em" },
-  marginTop: { xs: "2em", md: "0em", lg: "0em", xl: "0em" },
+  marginTop: { xs: "4em", md: "0em", lg: "0em", xl: "0em" },
 };
 const aboutDiv: SxProps = {
   display: "flex",
@@ -167,7 +167,7 @@ const aboutDiv: SxProps = {
   marginLeft: { xs: "0em", md: "4em", lg: "10em", xl: "5em" },
   justifyContent: "center",
   paddingLeft: { xs: "0", md: "1em", lg: "1em" },
-  height: { xs: "700px", md: "100%", lg: "100%", xl: "100%" },
+  height: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
 };
 const aboutMainText: SxProps = {
   width: { xs: "300px", md: "400px", lg: "450px", xl: "500px" },
@@ -179,7 +179,6 @@ const aboutMainText: SxProps = {
 const aboutWelcome: SxProps = {
   width: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
   zIndex: "1",
-  marginTop: { xs: "0em", md: "0em", lg: "0em", xl: "0em" },
 };
 const infoBox: SxProps = {
   width: "100%",
@@ -267,7 +266,8 @@ const countDown: SxProps = {
   fontWeight: "900",
   minWidth: "300px",
   textAlign: "center",
-  marginTop: "2em",
+  marginTop: "1em",
+  marginBottom: "1em",
 };
 const countDownText: SxProps = {
   fontSize: { xs: "1em", md: "2em", lg: "2em", xl: "2em" },
