@@ -175,6 +175,8 @@ const aboutMainText: SxProps = {
   textAlign: "left",
   paddingLeft: "1em",
   fontSize: { xs: "16px", md: "1.1em", lg: "1.1em", xl: "1.1em" },
+  fontFamily: `''Raleway', sans-serif'`,
+  marginBottom: { xs: "1em", md: "1em", lg: "1em", xl: "1em" },
 };
 const aboutWelcome: SxProps = {
   width: { xs: "100%", md: "100%", lg: "100%", xl: "100%" },
