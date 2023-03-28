@@ -180,7 +180,7 @@ const LayoutBox: SxProps = {
   },
   textColor: blueGrey[900],
   zIndex: "2",
-  marginTop: { xs: "5em", md: "0em", lg: "0", xl: "0" },
+  marginTop: { xs: "2em", md: "0em", lg: "0", xl: "0" },
 };
 const BoxStyle: SxProps = {
   width: { xs: "100%", md: "100%", lg: "50%", xl: "50%" },

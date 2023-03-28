@@ -144,7 +144,7 @@
     animation-duration: 0.5s;
   }
   .exp-image {
-    max-width: 200px;
+    max-width: 300px;
     max-height: 148px;
   }
   @keyframes eduAnimation {
@@ -219,6 +219,9 @@
 .exp-image {
   width: 400px !important;
   height: 250px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* height: 100%;
   object-fit: cover;
   border-radius: 2em; */
