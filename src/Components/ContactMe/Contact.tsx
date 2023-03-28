@@ -192,7 +192,7 @@ const button: SxProps = {
 
 const aboutIcons: SxProps = {
   position: { xs: "absolute", md: "absolute", lg: "absolute", xl: "" },
-  bottom: { xs: "0em", md: "1em", lg: "1em", xl: "0" },
+  bottom: { xs: "0em", md: "0em", lg: "0em", xl: "0" },
   left: { xs: "80%", md: "50%", lg: "50%", xl: "50%" },
   transform: {
     // xs: "translate(-50%, 0%)",
