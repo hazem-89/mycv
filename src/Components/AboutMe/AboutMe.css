@@ -110,6 +110,10 @@
   color: rgb(245, 158, 51);
   font-family: "Raleway", sans-serif;
 }
+.countDown {
+  color: rgb(250, 148, 23);
+  font-family: "Raleway", sans-serif;
+}
 .infoBox li a:link {
   text-decoration: none;
 }
@@ -119,9 +123,9 @@
 }
 
 .aboutWelcome {
-  color: rgb(243, 219, 174);
+  color: rgb(250, 241, 226);
   font-size: 2em;
-  font-family: "Mouse Memoirs", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .aboutMainText {

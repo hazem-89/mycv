@@ -273,6 +273,7 @@ const countDown: SxProps = {
 };
 const countDownText: SxProps = {
   fontSize: { xs: "1em", md: "2em", lg: "2em", xl: "2em" },
+  color: "#DE5656",
 };
 
 const DisplayNone: SxProps = {
